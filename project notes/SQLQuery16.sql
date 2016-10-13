@@ -13,7 +13,14 @@
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-DROP TABLE "ads_t";
+
+DROP DATABASE NWS_db
+GO
+CREATE DATABASE NWS_db
+GO
+
+USE NWS_db
+
 CREATE TABLE "ads_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "link" nvarchar(max),
@@ -26,7 +33,6 @@ INSERT INTO "ads_t" ("id", "link") VALUES
 (2, 'img/ads/ad_image2.jpg');
 SET IDENTITY_INSERT "ads_t" OFF;
 
-DROP TABLE "archives_t";
 CREATE TABLE "archives_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "title" nvarchar(max),
@@ -42,7 +48,6 @@ INSERT INTO "archives_t" ("id", "title", "link") VALUES
 (4, 'Spring 2016 newsletter', 'archive/DPNA_Newsletter_Spring_2016.pdf');
 SET IDENTITY_INSERT "archives_t" OFF;
 
-DROP TABLE "articles_t";
 CREATE TABLE "articles_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "uuid" nvarchar(max),
@@ -62,7 +67,6 @@ INSERT INTO "articles_t" ("id", "uuid", "hfso", "title", "image", "text") VALUES
 (5, 'd6303779-dfd9-4e09-bd0f-37502265cafd', 'F', 'American Flag', 'img/articles/american_flag.png', 'American flag vestibulum sodales maximus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sapien purus, aliquet iaculis augue congue, ornare mattis neque. Phasellus sit amet metus consequat, vulputate tortor nec, pretium mauris. In est nisi, dictum sit amet nunc vitae, egestas finibus dui. Curabitur dapibus, elit id interdum tincidunt, velit lacus gravida massa, et vestibulum arcu dui vel tortor. Quisque ornare cursus feugiat. Curabitur felis nunc, pellentesque ut augue eget, vestibulum commodo nisl. Cras imperdiet, lorem sed placerat eleifend, orci ipsum volutpat arcu, tristique dignissim turpis arcu ut turpis. Maecenas fermentum eros quis nulla tempor, sit amet scelerisque augue auctor. In posuere arcu at ante fringilla, imperdiet vehicula augue consectetur. Nam tincidunt volutpat lectus, blandit sagittis nunc mattis vitae. Aliquam non est justo. Vivamus interdum magna quis porttitor varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.');
 SET IDENTITY_INSERT "articles_t" OFF;
 
-DROP TABLE "feature_t";
 CREATE TABLE "feature_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "article" nvarchar(max),
@@ -78,7 +82,6 @@ INSERT INTO "feature_t" ("id", "article", "image1", "image2", "image3", "title")
 (1, 'This is feature text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum id velit dapibus maximus. Maecenas non felis interdum, efficitur justo ut, maximus felis. \r\n\r\nUt mauris lorem, gravida vel metus et, pulvinar malesuada erat. Sed sem ex, ullamcorper id ornare eu, imperdiet faucibus nunc. Sed nec lobortis nunc, eu porta orci. \r\n\r\nDonec eget dignissim odio, ut sagittis neque. Pellentesque pharetra volutpat maximus. ', 'img/feature/construction1.jpg', 'img/feature/construction2.jpg', 'img/feature/construction3.jpg', 'New Construction in Deer Park');
 SET IDENTITY_INSERT "feature_t" OFF;
 
-DROP TABLE "officers_t";
 CREATE TABLE "officers_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "name" nvarchar(max),
@@ -102,7 +105,6 @@ INSERT INTO "officers_t" ("id", "name", "email", "description", "photo") VALUES
 (10, 'Carolyn Underwood', 'carolyn.underwood@dpnatest.com', 'Board Member', 'img/officers/Carolyn_Underwood.jpg');
 SET IDENTITY_INSERT "officers_t" OFF;
 
-DROP TABLE "services_t";
 CREATE TABLE "services_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "text" nvarchar(max),
@@ -119,7 +121,6 @@ INSERT INTO "services_t" ("id", "text") VALUES
 (6, 'School Board: 555-1112');
 SET IDENTITY_INSERT "services_t" OFF;
 
-DROP TABLE "videos_t";
 CREATE TABLE "videos_t" (
   "id" int NOT NULL IDENTITY(1,1),
   "site" nvarchar(max),
