@@ -6,7 +6,6 @@ namespace NWS_cs
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("feature_t")]
     public partial class Feature
     {
         public int id { get; set; }
