@@ -1,6 +1,7 @@
 namespace NWS_cs.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,18 +15,12 @@ namespace NWS_cs.Migrations
 
         protected override void Seed(NWS_cs.NwsContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var adList = new List<Advertisements>
+            {
+                new Advertisements { },
+            };
+            adList.ForEach(s => context.Advertisements.AddOrUpdate(i => i.field, s));
+            context.SaveChanges();
         }
     }
 }

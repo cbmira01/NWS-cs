@@ -7,7 +7,7 @@ namespace NWS_cs
     using System.Data.Entity.Spatial;
 
     [Table("ads_t")]
-    public partial class Ads
+    public partial class Advertisements
     {
         public int id { get; set; }
 
