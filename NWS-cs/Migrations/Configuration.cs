@@ -16,8 +16,6 @@ namespace NWS_cs.Migrations
         protected override void Seed(NWS_cs.NwsContext context)
         {
 
-
-            int counter = 0;
             string line;
 
             // Read the file and display it line by line.
@@ -27,17 +25,8 @@ namespace NWS_cs.Migrations
                 context.Database.ExecuteSqlCommand(line);
             }
 
-            file.Close();
-
-
-         
-           var adList = new List<Advertisements>
-            {
-                new Advertisements { },
-            };
-            adList.ForEach(s => context.Advertisements.AddOrUpdate(i => i.id, s));
             context.SaveChanges();
-
+            file.Close();
         }
     }
 }
