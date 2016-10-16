@@ -13,12 +13,12 @@ namespace NWS_cs
         }
 
         public virtual DbSet<Advertisements> Advertisements { get; set; }
-        public virtual DbSet<Archives> archives_t { get; set; }
-        public virtual DbSet<Articles> articles_t { get; set; }
-        public virtual DbSet<Feature> feature_t { get; set; }
-        public virtual DbSet<Officers> officers_t { get; set; }
-        public virtual DbSet<Services> services_t { get; set; }
-        public virtual DbSet<Videos> videos_t { get; set; }
+        public virtual DbSet<Archives> Archives { get; set; }
+        public virtual DbSet<Articles> Articles { get; set; }
+        public virtual DbSet<Feature> Feature { get; set; }
+        public virtual DbSet<Officers> Officers { get; set; }
+        public virtual DbSet<Services> Services { get; set; }
+        public virtual DbSet<Videos> Videos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
