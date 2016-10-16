@@ -10,7 +10,7 @@ namespace NWS_cs.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(NWS_cs.NwsContext context)
