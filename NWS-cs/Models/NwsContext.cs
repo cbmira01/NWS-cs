@@ -22,7 +22,7 @@ namespace NWS_cs
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<articles_t>()
+            modelBuilder.Entity<Articles>()
                 .Property(e => e.hfso)
                 .IsFixedLength()
                 .IsUnicode(false);
