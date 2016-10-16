@@ -19,7 +19,7 @@ namespace NWS_cs.Migrations
             {
                 new Advertisements { },
             };
-            adList.ForEach(s => context.Advertisements.AddOrUpdate(i => i.field, s));
+            adList.ForEach(s => context.Advertisements.AddOrUpdate(i => i.id, s));
             context.SaveChanges();
         }
     }

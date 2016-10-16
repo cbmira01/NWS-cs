@@ -12,7 +12,7 @@ namespace NWS_cs
         {
         }
 
-        public virtual DbSet<Advertisements> ads_t { get; set; }
+        public virtual DbSet<Advertisements> Advertisements { get; set; }
         public virtual DbSet<Archives> archives_t { get; set; }
         public virtual DbSet<Articles> articles_t { get; set; }
         public virtual DbSet<Feature> feature_t { get; set; }
