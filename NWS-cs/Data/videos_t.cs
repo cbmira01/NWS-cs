@@ -6,7 +6,8 @@ namespace NWS_cs
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class videos_t
+    [Table ("videos_t")]
+    public partial class Videos
     {
         public int id { get; set; }
 

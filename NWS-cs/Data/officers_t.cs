@@ -6,7 +6,8 @@ namespace NWS_cs
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class officers_t
+    [Table("officers_t")]
+    public partial class Officers
     {
         public int id { get; set; }
 
