@@ -166,6 +166,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AdvertisementsController.cs" />
+    <Compile Include="Migrations\201610162341244_InitialMigration.cs" />
+    <Compile Include="Migrations\201610162341244_InitialMigration.Designer.cs">
+      <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertisements.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -193,7 +197,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <EmbeddedResource Include="NwsSeedData.sql" />
+    <EmbeddedResource Include="Migrations\201610162341244_InitialMigration.resx">
+      <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\NwsSeedData.sql" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -257,7 +264,6 @@
     <Content Include="Views\Advertisements\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\Archives\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Content\Videos\" />
