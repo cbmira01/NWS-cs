@@ -165,9 +165,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Migrations\201610162341244_InitialMigration.cs" />
     <Compile Include="Migrations\201610162341244_InitialMigration.Designer.cs">
       <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181441585_Initial.cs" />
+    <Compile Include="Migrations\201610181441585_Initial.Designer.cs">
+      <DependentUpon>201610181441585_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertisement.cs" />
@@ -225,6 +230,9 @@
     <Content Include="Scripts\foundation\foundation.tooltip.js" />
     <Content Include="Scripts\foundation\foundation.topbar.js" />
     <Content Include="Scripts\foundation\jquery.cookie.js" />
+    <EmbeddedResource Include="Migrations\201610181441585_Initial.resx">
+      <DependentUpon>201610181441585_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -256,6 +264,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index_Zurb.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Advertisement\Create.cshtml" />
+    <Content Include="Views\Advertisement\Delete.cshtml" />
+    <Content Include="Views\Advertisement\Details.cshtml" />
+    <Content Include="Views\Advertisement\Edit.cshtml" />
+    <Content Include="Views\Advertisement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />

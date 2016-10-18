@@ -10,7 +10,7 @@ namespace NWS_cs.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(NWS_cs.NwsContext context)
@@ -24,7 +24,7 @@ namespace NWS_cs.Migrations
                     id = 2,
                     link = "Content/Images/ads/ad_image2.jpg"}
             };
-            ads.ForEach(s => context.Advertisement.AddOrUpdate(p => p.id, s));
+            ads.ForEach(s => context.Advertisements.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -46,7 +46,7 @@ namespace NWS_cs.Migrations
                     title = "Spring 2016 newsletter",
                     link = "Content/Archives/DPNA_Newsletter_Spring_2016.pdf"}
             };
-            archives.ForEach(s => context.Archive.AddOrUpdate(p => p.id, s));
+            archives.ForEach(s => context.Archives.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -87,7 +87,7 @@ namespace NWS_cs.Migrations
                     image = "Content/Images/articles/american_flag.png",
                     text = "American flag vestibulum sodales maximus tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sapien purus, aliquet iaculis augue congue, ornare mattis neque. Phasellus sit amet metus consequat, vulputate tortor nec, pretium mauris. In est nisi, dictum sit amet nunc vitae, egestas finibus dui. Curabitur dapibus, elit id interdum tincidunt, velit lacus gravida massa, et vestibulum arcu dui vel tortor. Quisque ornare cursus feugiat. Curabitur felis nunc, pellentesque ut augue eget, vestibulum commodo nisl. Cras imperdiet, lorem sed placerat eleifend, orci ipsum volutpat arcu, tristique dignissim turpis arcu ut turpis. Maecenas fermentum eros quis nulla tempor, sit amet scelerisque augue auctor. In posuere arcu at ante fringilla, imperdiet vehicula augue consectetur. Nam tincidunt volutpat lectus, blandit sagittis nunc mattis vitae. Aliquam non est justo. Vivamus interdum magna quis porttitor varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."}
             };
-            articles.ForEach(s => context.Article.AddOrUpdate(p => p.id, s));
+            articles.ForEach(s => context.Articles.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -100,7 +100,7 @@ namespace NWS_cs.Migrations
                     image3 = "Content/Images/feature/construction3.jpg",
                     title = "New Construction in Deer Park"}
             };
-            feature.ForEach(s => context.Feature.AddOrUpdate(p => p.id, s));
+            feature.ForEach(s => context.Features.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -166,7 +166,7 @@ namespace NWS_cs.Migrations
                     description = "Board Member",
                     photo = "Content/Images/officers/Carolyn_Underwood.jpg"}
             };
-            officers.ForEach(s => context.Officer.AddOrUpdate(p => p.id, s));
+            officers.ForEach(s => context.Officers.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -178,7 +178,7 @@ namespace NWS_cs.Migrations
                 new Service {id = 5, text = "Mayor's Office: 555-1122"},
                 new Service {id = 6, text = "School Board: 555-1112"}
             };
-            services.ForEach(s => context.Service.AddOrUpdate(p => p.id, s));
+            services.ForEach(s => context.Services.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -209,7 +209,7 @@ namespace NWS_cs.Migrations
                     site = "youtube",
                     type = "",
                     title = "Dave's World: He Gooched His Bass Guitar",
-                    description = "Dave fixes a bass and enjoys a beer.",
+                    description = "Dave fixes a bass guitar and enjoys a beer.",
                     link = "https://www.youtube.com/watch?v=EZ10jbzcD18"},
                 new Video {
                     id = 5,
@@ -219,7 +219,7 @@ namespace NWS_cs.Migrations
                     description = "Five dudes, who look remarkably alike, cover The Strokes.",
                     link = "https://www.youtube.com/watch?v=GLf3nrZXZT8"}
             };
-            videos.ForEach(s => context.Video.AddOrUpdate(p => p.id, s));
+            videos.ForEach(s => context.Videos.AddOrUpdate(s));
             context.SaveChanges();
         }
     }
