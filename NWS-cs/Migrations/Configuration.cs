@@ -16,7 +16,6 @@ namespace NWS_cs.Migrations
         protected override void Seed(NWS_cs.NwsContext context)
         {
 
-
             var ads = new List<Advertisement> {
                 new Advertisement {
                     id = 1,

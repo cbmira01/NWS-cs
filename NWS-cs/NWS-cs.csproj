@@ -256,11 +256,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index_Zurb.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Advertisements\Create.cshtml" />
-    <Content Include="Views\Advertisements\Delete.cshtml" />
-    <Content Include="Views\Advertisements\Details.cshtml" />
-    <Content Include="Views\Advertisements\Edit.cshtml" />
-    <Content Include="Views\Advertisements\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
