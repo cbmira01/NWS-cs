@@ -172,14 +172,6 @@
     <Compile Include="Controllers\OfficerController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
-    <Compile Include="Migrations\201610162341244_InitialMigration.cs" />
-    <Compile Include="Migrations\201610162341244_InitialMigration.Designer.cs">
-      <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610181441585_Initial.cs" />
-    <Compile Include="Migrations\201610181441585_Initial.Designer.cs">
-      <DependentUpon>201610181441585_Initial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Advertisement.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -207,9 +199,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <EmbeddedResource Include="Migrations\201610162341244_InitialMigration.resx">
-      <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="App_Data\NwsSeedData.sql" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -233,9 +222,6 @@
     <Content Include="Scripts\foundation\foundation.tooltip.js" />
     <Content Include="Scripts\foundation\foundation.topbar.js" />
     <Content Include="Scripts\foundation\jquery.cookie.js" />
-    <EmbeddedResource Include="Migrations\201610181441585_Initial.resx">
-      <DependentUpon>201610181441585_Initial.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -252,7 +238,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
