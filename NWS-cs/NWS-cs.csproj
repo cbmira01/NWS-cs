@@ -165,30 +165,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AdvertisementsController.cs" />
     <Compile Include="Migrations\201610162341244_InitialMigration.cs" />
     <Compile Include="Migrations\201610162341244_InitialMigration.Designer.cs">
       <DependentUpon>201610162341244_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Advertisements.cs" />
+    <Compile Include="Models\Advertisement.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\Bundles\Foundation.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Models\Archives.cs" />
-    <Compile Include="Models\Articles.cs" />
+    <Compile Include="Models\Archive.cs" />
+    <Compile Include="Models\Article.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Feature.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\NwsContext.cs" />
-    <Compile Include="Models\Officers.cs" />
+    <Compile Include="Models\Officer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Services.cs" />
-    <Compile Include="Models\Videos.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\foundation\foundation.css" />

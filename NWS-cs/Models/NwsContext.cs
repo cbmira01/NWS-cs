@@ -12,17 +12,17 @@ namespace NWS_cs
         {
         }
 
-        public virtual DbSet<Advertisements> Advertisements { get; set; }
-        public virtual DbSet<Archives> Archives { get; set; }
-        public virtual DbSet<Articles> Articles { get; set; }
+        public virtual DbSet<Advertisement> Advertisement { get; set; }
+        public virtual DbSet<Archive> Archive { get; set; }
+        public virtual DbSet<Article> Article { get; set; }
         public virtual DbSet<Feature> Feature { get; set; }
-        public virtual DbSet<Officers> Officers { get; set; }
-        public virtual DbSet<Services> Services { get; set; }
-        public virtual DbSet<Videos> Videos { get; set; }
+        public virtual DbSet<Officer> Officer { get; set; }
+        public virtual DbSet<Service> Service { get; set; }
+        public virtual DbSet<Video> Video { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Articles>()
+            modelBuilder.Entity<Article>()
                 .Property(e => e.hfso)
                 .IsFixedLength()
                 .IsUnicode(false);

@@ -6,7 +6,7 @@ namespace NWS_cs
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Advertisements
+    public partial class Advertisement
     {
         public int id { get; set; }
 
