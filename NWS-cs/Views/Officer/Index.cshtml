@@ -8,22 +8,26 @@ Z
     <h4>Deer Park Neighborhood Association Officers</h4>
 
     <div class="row" data-equalizer>
-        @foreach (var item in Model)
-        {
-            <div ng-repeat="officer in officers"
-                    class="columns large-6 medium-6 small-12 panel left {{colorCycle($index)}}"
-                    data-equalizer-watch>
-                <div class="row">
-                    <div class="column large-4 medium-4 small-4 left">
-                        <img class="officerPicture" src="@Html.DisplayFor(modelItem => item.photo)" alt="Officer photo" />
-                    </div>
-                    <div class="column large-8 medium-8 small-8 left">
-                        <p>@Html.DisplayFor(modelItem => item.name)</p>
-                        <p>@Html.DisplayFor(modelItem => item.description)</p>
-                        <p>@Html.DisplayFor(modelItem => item.email)</p>
+        @{ 
+            int index = 0;
+            string[] colors = { "purpleA", "purpleB", "purpleC" };
+            foreach (var item in Model)
+            {
+                <div class="columns large-6 medium-6 small-12 panel left @Html.Raw(colors[index % colors.Length])"
+                        data-equalizer-watch>
+                    <div class="row">
+                        <div class="column large-4 medium-4 small-4 left">                 
+                            <img class="officerPicture" src="~/@(Html.DisplayFor(modelItem => item.photo))" alt="Officer photo" />
+                        </div>
+                        <div class="column large-8 medium-8 small-8 left">
+                            <p>@Html.DisplayFor(modelItem => item.name)</p>
+                            <p>@Html.DisplayFor(modelItem => item.description)</p>
+                            <p>@Html.DisplayFor(modelItem => item.email)</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                index++;
+            }
         }
 
     </div>
