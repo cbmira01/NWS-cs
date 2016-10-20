@@ -3,49 +3,25 @@
 @{
     ViewBag.Title = "Index";
 }
+Z
+<div class="row bumpPastTopbar" my-reflow-panels>
+    <h4>Deer Park Neighborhood Association Officers</h4>
 
-<h2>Index</h2>
+    <div class="row" data-equalizer>
+        <div ng-repeat="officer in officers"
+             class="columns large-6 medium-6 small-12 panel left {{colorCycle($index)}}"
+             data-equalizer-watch>
+            <div class="row">
+                <div class="column large-4 medium-4 small-4 left">
+                    <img class="officerPicture" src="{{officer.photo}}" alt="Officer photo" />
+                </div>
+                <div class="column large-8 medium-8 small-8 left">
+                    <p>{{officer.name}}</p>
+                    <p>{{officer.description}}</p>
+                    <p>{{officer.email}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.photo)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.photo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
-
-</table>
+</div>

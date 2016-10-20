@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "_Header";
+}
+
+<div class="contain-to-grid fixed topbar">
+    <nav class="top-bar">
+        <img class="deerLogo hide-for-small-only left"
+             src="~/Content/Images/deer-logo-256px.jpeg"
+             alt="Deerpark logo" />
+
+        <a class="main-logo left">
+            <!-- id dpnaText is styled by a reactive routine in my-javascript.js -->
+            <h4 id="dpnaText">Deer Park Neighborhood Association</h4>
+        </a>
+
+        <a class="menuButton button right"
+           data-options="ignore_repositioning is_hover:false"
+           data-dropdown="mydrop">
+            <i class="fi-list"></i>
+        </a>
+
+        <ul id="mydrop" class="f-dropdown right" data-dropdown-content>
+            <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
+            <li>@Html.ActionLink("Archives", "Index", "Archive")</li>
+            <li>@Html.ActionLink("Officers", "Index", "Officer")</li>
+            <li>@Html.ActionLink("Services", "Index", "Service")</li>
+            <li>@Html.ActionLink("Add Content", "Index", "Home")</li>
+            <li>@Html.ActionLink("Delete Content", "Index", "Home")</li>
+        </ul>
+    </nav>
+</div>
+
+

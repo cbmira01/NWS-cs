@@ -252,8 +252,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <None Include="Views\Home\About.cshtml.original" />
+    <None Include="Views\Home\Contact.cshtml.original" />
     <Content Include="Views\Home\Index_Zurb.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Advertisement\Create.cshtml" />
@@ -292,6 +292,9 @@
     <Content Include="Views\Video\Edit.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml.original" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <None Include="Views\Officer\Index.cshtml.original" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
