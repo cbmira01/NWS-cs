@@ -2,36 +2,65 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<html>
+    <head>
+        <base href="." />
+        <title>Neighborhood Web Site</title>
+        <meta charset="utf-8">
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/foundation-icons/foundation-icons.css")" rel="stylesheet" type="text/css" />
+    </head>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <body>
+        <!-- Top Bar -->
+        <div class="contain-to-grid fixed topbar">
+            <nav class="top-bar">
+                <img class="deerLogo hide-for-small-only left"
+                     src="~/Content/Images/deer-logo-256px.jpeg"
+                     alt="Deerpark logo" />
 
-    Contact GitHub API Training Shop Blog About
+                <a class="main-logo left">
+                    <!-- id dpnaText is styled by a reactive routine in my-javascript.js -->
+                    <h4 id="dpnaText">Deer Park Neighborhood Association</h4>
+                </a>
 
-    © 2016 GitHub, Inc. Terms Privacy Security Status Help
+                <a class="menuButton button right"
+                   data-options="ignore_repositioning is_hover:false"
+                   data-dropdown="mydrop">
+                    <i class="fi-list"></i>
+                </a>
+
+                <ul id="mydrop" class="f-dropdown right" data-dropdown-content>
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/archives">Archives</a></li>
+                    <li><a href="#/officers">Officers</a></li>
+                    <li><a href="#/services">Services</a></li>
+                    <li><a href="#/add-content#top">Add Content</a></li>
+                    <li><a href="#/delete-content#top">Delete Content</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Application content delivered here -->
 
 
+
+        <!-- Footer -->
+        <div>
+            <footer class="row">
+                <hr />
+                <div>
+                    <p>
+                        Follow DPNA
+                        <a href="https://www.facebook.com/"><i class="socialIcon fi-social-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="socialIcon fi-social-twitter"></i></a>
+                        <a href="http://www.codelouisville.org/">
+                            <img class="CL-banner" src="~/Content/Images/codelouisville-logo-banner.jpg" alt="Code Louisville Banner" />
+                        </a>
+                    <p>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>

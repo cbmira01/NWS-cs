@@ -1,24 +1,160 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+/* Accessibility styling
+================================ */
+*:focus {
+  outline: dashed;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+a {
+  outline: none;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+a:focus, a:hover {
+  outline: solid;
+  background: invert;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+a:active {
+  outline: none;
 }
+
+/* Type
+================================ */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+/* Top-bar
+================================ */
+.top-bar {
+  height: 4em;
+  overflow: visible;
+}
+
+.deerLogo {
+  height: 4em; 
+  width: 4em;
+  display: inline;
+}
+
+a.main-logo h4 {
+  margin-left: 1em;
+  color: white;
+  display: inline;
+}
+
+.menuButton {
+  height: 3.5em;
+  background: #333;  
+  font-size: 3em;
+}
+
+.menuButton:hover, .menuButton:focus {
+  background: #333;
+}
+
+.menuButton i {
+  color: white;
+  font-size: 2.75em;
+}
+
+.bumpPastTopbar {
+  padding-top: 5em;
+}
+
+/* Panel Colors
+================================ */
+.featureColorImage {
+  background: #e6cef1;
+}
+
+.featureColorText {
+  background: #fff3b6;
+}
+
+.pastelA {
+  background: #e6cef1;
+}
+
+.pastelB {
+  background: #fff3b6;  
+}
+
+.pastelC {
+  background: #def8b1;  
+}
+
+.purpleA {  
+  background: #c9a0dc;
+}
+
+.purpleB {  
+  background: #e6cef1;
+}
+
+.purpleC {
+  background: #BD76DF;
+}
+
+.greenA {  
+  background: #b1de60;
+}
+
+.greenB {  
+  background: #cdf18b;
+}
+
+.greenC {  
+  background: #def8b1;
+}
+
+/* Images and Video 
+================================ */
+.officerPicture {
+  height: 150px;
+  width: 150px;
+}
+
+.smallPicture {
+  height: 60px;
+  width: 60px;
+}
+
+.adGraphics {
+  height: 100%;
+  width: 100%;  
+}
+
+/* Footer
+================================= */
+footer {
+  color: silver;
+}
+
+.socialIcon {
+  font-size: 3em;
+  display: inline;
+  color: silver;
+}
+
+.CL-banner {
+  height: 20%;
+  width: 20%;
+}
+
+/* Media Queries
+================================= */
+// Foundation media queries from http://foundation.zurb.com/docs/media-queries.html
+
+// Small screens,  up to 640px 
+@media only screen and (max-width: 40em) { 
+}
+
+// Medium screens, 641px to 1024px 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+}
+
+// Large screens,  1025px to 1440px and larger..
+@media only screen and (min-width: 64.063em) { 
+}
+

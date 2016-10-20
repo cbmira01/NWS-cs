@@ -196,6 +196,7 @@
     <Content Include="Content\foundation\foundation.css" />
     <Content Include="Content\foundation\foundation.mvc.css" />
     <Content Include="Content\foundation\normalize.css" />
+    <None Include="Content\Site.css.original" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -290,9 +291,11 @@
     <Content Include="Views\Video\Details.cshtml" />
     <Content Include="Views\Video\Edit.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml.original" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
+    <Folder Include="Content\foundation-icons\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Content\Videos\" />
   </ItemGroup>
