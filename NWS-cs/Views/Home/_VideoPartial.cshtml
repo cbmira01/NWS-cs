@@ -4,9 +4,12 @@
     <h6>Videos...</h6>
 
     @{
+        int index = 0;
+        string[] colors = { "purpleA", "purpleB", "purpleC" };
         foreach (var item in Model)
         {
-            <div class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
+            <div class="columns small-12 medium-6 large-4 panel left 
+                 @Html.Raw(colors[index % colors.Length])"
                  data-equalizer-watch="eq-videos">
 
                 @if (item.site.Equals("onsite"))
@@ -28,7 +31,6 @@
                 }
                 else
                 {
-                    <!-- No video available -->
                     <div>
                         <img src="@Html.DisplayFor(modelItem => item.link)" alt="@Html.DisplayFor(modelItem => item.title)" />
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
@@ -36,6 +38,7 @@
                     </div>
                 }
             </div>
+            index++;
         }
     }
 </div>
