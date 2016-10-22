@@ -1,10 +1,14 @@
-﻿    <!-- Advertising Panels -->
+﻿@model IEnumerable<NWS_cs.Advertisement>
+
 <div class="row" data-equalizer="eq-ads">
-    <h6>
-        Ads...<h6>
-            <div ng-repeat="ad in ads"
-                 class="columns small-12 medium-6 large-4 panel left"
+    <h6>Ads...</h6>
+    @{
+        foreach (var item in Model)
+        {
+            <div class="columns small-12 medium-6 large-4 panel left"
                  data-equalizer-watch="eq-ads">
-                <img class="adGraphics" src="{{ad.link}}" alt="Advertising" />
+                <img class="adGraphics" src="~/@(Html.DisplayFor(modelItem => item.link))" alt="Advertising" />
             </div>
+        }
+    }
 </div>

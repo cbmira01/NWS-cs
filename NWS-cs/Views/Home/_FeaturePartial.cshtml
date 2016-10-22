@@ -3,7 +3,6 @@
 <div class="row" data-equalizer="eq-feature">
     @{
         var feature = Model.ElementAt(0);
-        string testString = feature.image1;
         <div class="columns small-12 medium-6 large-6 featureColorImage panel"
              data-equalizer-watch="eq-feature">
                 <div class="image">
@@ -19,7 +18,7 @@
         <div class="columns small-12 medium-6 large-6 featureColorText panel"
              data-equalizer-watch="eq-feature">
             <h4>@(feature.title)</h4>
-            <p style="white-space:pre-wrap;">>@(feature.article)</p>
+            <p style="white-space:pre-wrap;">@(feature.article)</p>
         </div>
      }
 </div>

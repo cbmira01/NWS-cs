@@ -6,31 +6,38 @@
     @{
         foreach (var item in Model)
         {
-                <div ng-repeat="video in videos"
-                     ng-switch="video.site"
-                     class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
-                     data-equalizer-watch="eq-videos">
-                    <div ng-switch-when="onsite">
+            <div class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
+                 data-equalizer-watch="eq-videos">
+
+                @if (item.site.Equals("onsite"))
+                {
+                    <div>
                         <video controls>
                             <source src="{{video.link}}" type="{{video.type}}">
                         </video>
-                        <h5>{{video.title}}</h5>
+                        <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                         <p>@Html.DisplayFor(modelItem => item.description)</p>
                     </div>
-                    <div ng-switch-when="youtube">
+                }
+                else if (item.site.Equals("youtube")) {
+                    <div>
                         <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
-                        <h5>{{video.title}}</h5>
-                        <p>{{video.description}}</p>
+                        <h5>@Html.DisplayFor(modelItem => item.title)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.description)</p>
                     </div>
+                }
+                else
+                {
                     <!-- No video available -->
-                    <div ng-switch-default>
-                        <img src="{{video.link}}" alt="{{video.title}}" />
-                        <h5>{{video.title}}</h5>
-                        <p>{{video.description}}</p>
+                    <div>
+                        <img src="@Html.DisplayFor(modelItem => item.link)" alt="@Html.DisplayFor(modelItem => item.title)" />
+                        <h5>@Html.DisplayFor(modelItem => item.title)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.description)</p>
                     </div>
-                </div>
-            }
+                }
+            </div>
         }
+    }
 </div>
 
 
