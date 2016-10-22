@@ -1,22 +1,25 @@
-﻿    <!-- Feature Article Panels -->
+﻿@model IEnumerable<NWS_cs.Feature>
+
 <div class="row" data-equalizer="eq-feature">
-    <div class="columns small-12 medium-6 large-6 featureColorImage panel"
-         data-equalizer-watch="eq-feature">
-        <slick class="slider featureCarousel" dots=true infinite=true fade=true autoplay=true speed=3000>
-            <div class="image">
-                <img src="{{feature[0].image1}}" alt="Carousel slide" />
-            </div>
-            <div class="image">
-                <img src="{{feature[0].image2}}" alt="Carousel slide" />
-            </div>
-            <div class="image">
-                <img src="{{feature[0].image3}}" alt="Carousel slide" />
-            </div>
-        </slick>
-    </div>
-    <div class="columns small-12 medium-6 large-6 featureColorText panel"
-         data-equalizer-watch="eq-feature">
-        <h4>{{feature[0].title}}</h4>
-        <p style="white-space:pre-wrap;">{{feature[0].article}}</p>
-    </div>
+    @{
+        var feature = Model.ElementAt(0);
+        string testString = feature.image1;
+        <div class="columns small-12 medium-6 large-6 featureColorImage panel"
+             data-equalizer-watch="eq-feature">
+                <div class="image">
+                    <img src="~/@(feature.image1)" alt="Carousel slide" />
+                </div>
+                <div class="image">
+                    <img src="~/@(feature.image2)" alt="Carousel slide" />
+                </div>
+                <div class="image">
+                    <img src="~/@(feature.image3)" alt="Carousel slide" />
+                </div>
+        </div>
+        <div class="columns small-12 medium-6 large-6 featureColorText panel"
+             data-equalizer-watch="eq-feature">
+            <h4>@(feature.title)</h4>
+            <p style="white-space:pre-wrap;">>@(feature.article)</p>
+        </div>
+     }
 </div>

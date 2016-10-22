@@ -3,8 +3,8 @@
 }
 
 <div class="bumpPastTopbar" my-reflow-panels>
-    @*@Html.Partial("_FeaturePartial")*@  
+    @Html.Action("_FeaturePartial", "Home")
     @Html.Action("_ArticlePartial", "Home")
     @Html.Action("_VideoPartial", "Home")
-    @*@Html.Partial("_AdvertisementPartial")*@
+    @Html.Action("_AdvertisementPartial", "Home")
 </div>
