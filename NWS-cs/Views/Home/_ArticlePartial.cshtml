@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NWS_cs.Article>
+
+<div class="row" data-equalizer="eq-inline">
+    <h6>Articles...</h6>
+
+    @{
+        foreach (var item in Model)
+        {
+            <div class="columns small-12 medium-6 large-4 panel left {{greenCycle($index)}}"
+                 data-equalizer-watch="eq-inline">
+                <div>
+                    @if (item.hfso == "T") {
+                        <img class="hide-for-small-only" src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />
+                    } else {
+                        <img src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />
+                    }
+                </div>
+                <h5>@Html.DisplayFor(modelItem => item.title)</h5>
+                <p>{{article.text | limitTo:100}}...</p>
+                <a href="#/read-article/{{article.uuid}}" class="button tiny">Read More</a>
+            </div>
+        }
+    }
+</div>

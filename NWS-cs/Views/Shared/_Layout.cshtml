@@ -1,34 +1,34 @@
 ﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8" />
+    <head>
+        <meta charset="utf-8" />
 
-    @*Set the viewport width to device width for mobile *@
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        @*Set the viewport width to device width for mobile *@
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>@ViewBag.Title</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    @Styles.Render("~/Content/foundation/css")
-    <link href="@Url.Content("~/Content/foundation-icons/foundation-icons.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        @Styles.Render("~/Content/foundation/css")
+        <link href="@Url.Content("~/Content/foundation-icons/foundation-icons.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
-    @RenderSection("head", required: false)
-    @Scripts.Render("~/bundles/modernizr")
-</head>
+        @RenderSection("head", required: false)
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
 
-<body>
-    @RenderPage("~/Views/Shared/_Header.cshtml")
-    @RenderBody()
-    @RenderPage("~/Views/Shared/_Footer.cshtml")
+    <body>
+        @RenderPage("~/Views/Shared/_Header.cshtml")
+        @RenderBody()
+        @RenderPage("~/Views/Shared/_Footer.cshtml")
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/foundation")
-    <script>
-        $(document).foundation();
-    </script>
-    @*Use the Scripts section to define page specific scripts*@
-    @RenderSection("scripts", required: false)
-</body>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/foundation")
+        <script>
+            $(document).foundation();
+        </script>
+        @*Use the Scripts section to define page specific scripts*@
+        @RenderSection("scripts", required: false)
+    </body>
 </html>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<NWS_cs.Video>
+
+<div class="row" data-equalizer="eq-videos">
+    <h6>Videos...</h6>
+
+    @{
+        foreach (var item in Model)
+        {
+                <div ng-repeat="video in videos"
+                     ng-switch="video.site"
+                     class="columns small-12 medium-6 large-4 panel left {{purpleCycle($index)}}"
+                     data-equalizer-watch="eq-videos">
+                    <div ng-switch-when="onsite">
+                        <video controls>
+                            <source src="{{video.link}}" type="{{video.type}}">
+                        </video>
+                        <h5>{{video.title}}</h5>
+                        <p>@Html.DisplayFor(modelItem => item.description)</p>
+                    </div>
+                    <div ng-switch-when="youtube">
+                        <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
+                        <h5>{{video.title}}</h5>
+                        <p>{{video.description}}</p>
+                    </div>
+                    <!-- No video available -->
+                    <div ng-switch-default>
+                        <img src="{{video.link}}" alt="{{video.title}}" />
+                        <h5>{{video.title}}</h5>
+                        <p>{{video.description}}</p>
+                    </div>
+                </div>
+            }
+        }
+</div>
+
+

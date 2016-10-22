@@ -8,22 +8,30 @@ namespace NWS_cs.Controllers
 {
     public class HomeController : Controller
     {
+        private NwsContext db = new NwsContext();
+
+        public ActionResult _FeaturePartial()
+        {
+            return PartialView(db.Features.ToList());
+        }
+
+        public ActionResult _ArticlePartial()
+        {
+            return PartialView(db.Articles.ToList());
+        }
+
+        public ActionResult _VideoPartial()
+        {
+            return PartialView(db.Videos.ToList());
+        }
+
+        public ActionResult _AdvertisementPartial()
+        {
+            return PartialView(db.Advertisements.ToList());
+        }
+
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

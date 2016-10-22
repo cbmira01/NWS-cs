@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-Z
+
 <div class="row bumpPastTopbar" my-reflow-panels>
     <h4>Deer Park Neighborhood Association Officers</h4>
 
@@ -14,7 +14,7 @@ Z
             foreach (var item in Model)
             {
                 <div class="columns large-6 medium-6 small-12 panel left @Html.Raw(colors[index % colors.Length])"
-                        data-equalizer-watch>
+                     data-equalizer-watch>
                     <div class="row">
                         <div class="column large-4 medium-4 small-4 left">                 
                             <img class="officerPicture" src="~/@(Html.DisplayFor(modelItem => item.photo))" alt="Officer photo" />
