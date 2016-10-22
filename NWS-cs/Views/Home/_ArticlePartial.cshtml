@@ -3,9 +3,11 @@
 <div class="row" data-equalizer="eq-inline">
     <h6>Articles...</h6>
     @{
+        int index = 0;
+        string[] colors = { "greenA", "greenB", "greenC" };
         foreach (var item in Model)
         {
-            <div class="columns small-12 medium-6 large-4 panel left {{greenCycle($index)}}"
+            <div class="columns small-12 medium-6 large-4 panel left @Html.Raw(colors[index % colors.Length])"
                  data-equalizer-watch="eq-inline">
                 <div>
                     @if (item.hfso == "T") {
@@ -18,6 +20,7 @@
                 <p>{{article.text | limitTo:100}}...</p>
                 <a href="#/read-article/{{article.uuid}}" class="button tiny">Read More</a>
             </div>
+            index++;
         }
     }
 </div>
