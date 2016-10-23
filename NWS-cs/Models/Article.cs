@@ -20,5 +20,12 @@ namespace NWS_cs
         public string image { get; set; }
 
         public string text { get; set; }
+
+        // Thanks to http://stackoverflow.com/a/9398315
+        public string ShortText
+        {
+            get { return text != null ? text.Substring(0, 100) + "..." : ""; }
+        }
+
     }
 }

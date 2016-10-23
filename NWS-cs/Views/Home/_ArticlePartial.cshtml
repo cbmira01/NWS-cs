@@ -18,8 +18,8 @@
                     }
                 </div>
                 <h5>@Html.DisplayFor(modelItem => item.title)</h5>
-                <p>{{article.text | limitTo:100}}...</p>
-                <a href="#/read-article/{{article.uuid}}" class="button tiny">Read More</a>
+                <p>@Html.DisplayFor(modelItem => item.ShortText)</p>
+                <a href="~/ReadArticle/@(Html.DisplayFor(modelItem => item.uuid))" class="button tiny">Read More</a>
             </div>
             index++;
         }

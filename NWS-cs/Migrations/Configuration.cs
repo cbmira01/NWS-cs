@@ -193,7 +193,7 @@ namespace NWS_cs.Migrations
                     type = "",
                     title = "Pinback: A Request",
                     description = "From the album 'Information Received'.",
-                    link = "https://www.youtube.com/watch?v=MaHrMR7JRS8"},
+                    link = "https://www.youtube.com/embed/MaHrMR7JRS8"},
                 new Video {
                     id = 3,
                     site = "",
@@ -207,14 +207,14 @@ namespace NWS_cs.Migrations
                     type = "",
                     title = "Dave's World: He Gooched His Bass Guitar",
                     description = "Dave fixes a bass guitar and enjoys a beer.",
-                    link = "https://www.youtube.com/watch?v=EZ10jbzcD18"},
+                    link = "https://www.youtube.com/embed/EZ10jbzcD18"},
                 new Video {
                     id = 5,
                     site = "youtube",
                     type = "",
                     title = "You Only Live Once (Cover)",
                     description = "Five dudes, who look remarkably alike, cover The Strokes.",
-                    link = "https://www.youtube.com/watch?v=GLf3nrZXZT8"}
+                    link = "https://www.youtube.com/embed/GLf3nrZXZT8"}
             };
             videos.ForEach(s => context.Videos.AddOrUpdate(s));
             context.SaveChanges();
