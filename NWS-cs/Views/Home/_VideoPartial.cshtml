@@ -15,7 +15,7 @@
                 @if (item.site.Equals("onsite"))
                 {
                     <div>
-                        <video controls>
+                        <video width="300" height="220" controls>
                             <source src="@Html.DisplayFor(modelItem => item.link)" type="@Html.DisplayFor(modelItem => item.type)">
                         </video>
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
@@ -24,7 +24,8 @@
                 }
                 else if (item.site.Equals("youtube")) {
                     <div>
-                        <youtube-video video-url="video.link" player-height="'auto'" player-width="'auto'"></youtube-video>
+                        @*<iframe src="@Html.DisplayFor(modelItem => item.link)" allowfullscreen></iframe>*@
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/GLf3nrZXZT8" frameborder="0" allowfullscreen></iframe>
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                         <p>@Html.DisplayFor(modelItem => item.description)</p>
                     </div>
@@ -42,5 +43,3 @@
         }
     }
 </div>
-
-
