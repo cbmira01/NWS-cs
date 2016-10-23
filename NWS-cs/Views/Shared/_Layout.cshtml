@@ -11,6 +11,8 @@
 
         @Styles.Render("~/Content/foundation/css")
         <link href="@Url.Content("~/Content/foundation-icons/foundation-icons.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/Slick/slick.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/Slick/slick-theme.css")" rel="stylesheet" type="text/css" />
         <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
         @RenderSection("head", required: false)
@@ -25,8 +27,23 @@
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/foundation")
+        <script src="@Url.Content("~/Scripts/Slick/slick.min.js")"></script>
         <script>
+            // Initialize Zurb Foundation
             $(document).foundation();
+
+            // Initialize Slick Carousel
+            $(document).ready(function() {
+                $('.featureCarousel').slick({
+                    accessibility: true,
+                    dots: false,
+                    infinite: true,
+                    autoplay: true,
+                    autoplayspeed: 3000,
+                    fade: true,
+                    cssEase: 'linear'
+                });
+            });
         </script>
         @*Use the Scripts section to define page specific scripts*@
         @RenderSection("scripts", required: false)
