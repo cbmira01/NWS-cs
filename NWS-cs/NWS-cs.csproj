@@ -167,6 +167,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\ArchiveController.cs" />
+    <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\ReadController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
@@ -307,6 +308,7 @@
     <Content Include="Views\Home\_AdvertisementPartial.cshtml" />
     <Content Include="Views\Home\_FeaturePartial.cshtml" />
     <Content Include="Views\Read\Article.cshtml" />
+    <Content Include="Views\Edit\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
