@@ -14,25 +14,9 @@ namespace NWS_cs.Controllers
     {
         private NwsContext db = new NwsContext();
 
-        // GET: Advertisement
-        public ActionResult Index()
+        public ActionResult Content()
         {
             return View(db.Advertisements.ToList());
-        }
-
-        // GET: Advertisement/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Advertisement advertisement = db.Advertisements.Find(id);
-            if (advertisement == null)
-            {
-                return HttpNotFound();
-            }
-            return View(advertisement);
         }
 
         // GET: Advertisement/Create
@@ -52,7 +36,7 @@ namespace NWS_cs.Controllers
             {
                 db.Advertisements.Add(advertisement);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(advertisement);
@@ -84,7 +68,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(advertisement).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(advertisement);
         }
@@ -112,7 +96,7 @@ namespace NWS_cs.Controllers
             Advertisement advertisement = db.Advertisements.Find(id);
             db.Advertisements.Remove(advertisement);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)
