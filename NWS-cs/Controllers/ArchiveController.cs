@@ -20,6 +20,11 @@ namespace NWS_cs.Controllers
             return View(db.Archives.ToList());
         }
 
+        public ActionResult Content()
+        {
+            return View(db.Archives.ToList());
+        }
+
         // GET: Archive/Details/5
         public ActionResult Details(int? id)
         {

@@ -252,6 +252,10 @@
     <Content Include="Scripts\Slick\slick.js" />
     <Content Include="Scripts\Slick\slick.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Archive\Content.cshtml" />
+    <Content Include="Views\Article\Content.cshtml" />
+    <Content Include="Views\Advertisement\Content.cshtml" />
+    <Content Include="Views\Feature\Content.cshtml" />
     <None Include="Views\Officer\Content.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -310,6 +314,8 @@
     <Content Include="Views\Home\_FeaturePartial.cshtml" />
     <Content Include="Views\Read\Article.cshtml" />
     <Content Include="Views\Edit\Index.cshtml" />
+    <Content Include="Views\Service\Content.cshtml" />
+    <Content Include="Views\Video\Content.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
