@@ -25,21 +25,6 @@ namespace NWS_cs.Controllers
             return View(db.Archives.ToList());
         }
 
-        // GET: Archive/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Archive archive = db.Archives.Find(id);
-            if (archive == null)
-            {
-                return HttpNotFound();
-            }
-            return View(archive);
-        }
-
         // GET: Archive/Create
         public ActionResult Create()
         {
@@ -57,7 +42,7 @@ namespace NWS_cs.Controllers
             {
                 db.Archives.Add(archive);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(archive);
@@ -89,7 +74,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(archive).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(archive);
         }
@@ -117,7 +102,7 @@ namespace NWS_cs.Controllers
             Archive archive = db.Archives.Find(id);
             db.Archives.Remove(archive);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)
