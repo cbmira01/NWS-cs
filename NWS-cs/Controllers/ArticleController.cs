@@ -14,8 +14,7 @@ namespace NWS_cs.Controllers
     {
         private NwsContext db = new NwsContext();
 
-        // GET: Article
-        public ActionResult Index()
+        public ActionResult Content()
         {
             return View(db.Articles.ToList());
         }
@@ -52,7 +51,7 @@ namespace NWS_cs.Controllers
             {
                 db.Articles.Add(article);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(article);
@@ -84,7 +83,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(article).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(article);
         }
@@ -112,7 +111,7 @@ namespace NWS_cs.Controllers
             Article article = db.Articles.Find(id);
             db.Articles.Remove(article);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)
