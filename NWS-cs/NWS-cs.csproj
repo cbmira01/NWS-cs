@@ -252,6 +252,7 @@
     <Content Include="Scripts\Slick\slick.js" />
     <Content Include="Scripts\Slick\slick.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Views\Officer\Content.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

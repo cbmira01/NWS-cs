@@ -20,6 +20,11 @@ namespace NWS_cs.Controllers
             return View(db.Officers.ToList());
         }
 
+        public ActionResult Content()
+        {
+            return View(db.Officers.ToList());
+        }
+
         // GET: Officer/Details/5
         public ActionResult Details(int? id)
         {
