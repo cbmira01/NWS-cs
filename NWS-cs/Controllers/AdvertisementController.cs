@@ -88,7 +88,6 @@ namespace NWS_cs.Controllers
 
         // POST: Advertisement/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Advertisement advertisement = db.Advertisements.Find(id);

@@ -4,16 +4,16 @@
     ViewBag.Title = "Ad Edit";
 }
 
-@using (Html.BeginForm())
-{
-    <div class="row bumpPastTopbar">
-        <h4>Edit an Advertisement</h4>
+<div class="row bumpPastTopbar">
+    <h4>Edit an Advertisement</h4>
 
-            @Html.LabelFor(model => model.link)
-            <div class="columns large-12 medium-12 small-12">
-                @Html.EditorFor(model => model.link)
-            </div>
+    @Html.LabelFor(model => model.link)
+    <div class="columns large-12 medium-12 small-12 panel pastelA">
+        @Html.EditorFor(model => model.link)
+    </div>
 
+    @using (Html.BeginForm())
+    {
         <div class="form-group">
             <input type="submit" value="Save" class="button tiny" />
         </div>
@@ -21,8 +21,10 @@
         <a href='@Url.Action("Content", "Advertisement")' class="button tiny">
             Back to List
         </a>
-    </div>
-}
+    }
+
+</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
