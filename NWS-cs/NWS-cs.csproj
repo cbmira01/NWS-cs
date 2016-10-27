@@ -291,9 +291,7 @@
     <Content Include="Views\Service\Edit.cshtml" />
     <Content Include="Views\Video\Create.cshtml" />
     <Content Include="Views\Video\Delete.cshtml" />
-    <Content Include="Views\Video\Details.cshtml" />
     <Content Include="Views\Video\Edit.cshtml" />
-    <Content Include="Views\Video\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\_ArticlePartial.cshtml" />

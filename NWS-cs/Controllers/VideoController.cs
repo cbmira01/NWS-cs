@@ -15,24 +15,9 @@ namespace NWS_cs.Controllers
         private NwsContext db = new NwsContext();
 
         // GET: Video
-        public ActionResult Index()
+        public ActionResult Content()
         {
             return View(db.Videos.ToList());
-        }
-
-        // GET: Video/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Video video = db.Videos.Find(id);
-            if (video == null)
-            {
-                return HttpNotFound();
-            }
-            return View(video);
         }
 
         // GET: Video/Create
@@ -52,7 +37,7 @@ namespace NWS_cs.Controllers
             {
                 db.Videos.Add(video);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(video);
@@ -84,7 +69,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(video).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(video);
         }
@@ -112,7 +97,7 @@ namespace NWS_cs.Controllers
             Video video = db.Videos.Find(id);
             db.Videos.Remove(video);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)
