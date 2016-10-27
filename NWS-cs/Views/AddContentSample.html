@@ -1,0 +1,169 @@
+﻿
+<div id="top" class="row bumpPastTopbar" my-reflow-panels>
+    <h4>Neighborhood Website: Add Content</h4>
+
+    <div class="row">
+        <div class="columns small-12 medium-12 large-12 left">
+            <a href="" ng-click="gotoAnchor('update-feature')" class="button tiny">Feature</a>
+            <a href="" ng-click="gotoAnchor('add-article')" class="button tiny">Articles</a>
+            <a href="" ng-click="gotoAnchor('add-video')" class="button tiny">Videos</a>
+            <a href="" ng-click="gotoAnchor('add-ad')" class="button tiny">Ads</a>
+            <a href="" ng-click="gotoAnchor('add-officer')" class="button tiny">Officers</a>
+            <a href="" ng-click="gotoAnchor('add-service')" class="button tiny">Services</a>
+            <a href="" ng-click="gotoAnchor('add-archive')" class="button tiny">Archives</a>
+        </div>
+    </div>
+
+    <div id="update-feature" class="row bumpPastTopbar">
+        <h4>Update feature article and images</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Feature Article Title
+                <textarea ng-model="feature.title"></textarea>
+            </label>
+            <label>
+                Feature Article Text
+                <textarea ng-model="feature.article"></textarea>
+            </label>
+            <label>
+                Carousel Image 1 URL
+                <input type="text" ng-model="feature.image1" />
+            </label>
+            <label>
+                Carousel Image 2 URL
+                <input type="text" ng-model="feature.image2" />
+            </label>
+            <label>
+                Carousel Image 3 URL
+                <input type="text" ng-model="feature.image3" />
+            </label>
+        </div>
+        <a href="" ng-click="updateFeature()" class="button tiny">Update</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-article" class="row bumpPastTopbar">
+        <h4>Add an article</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Title
+                <input type="text" ng-model="article.title" />
+            </label>
+            <label>
+                Text
+                <textarea ng-model="article.text"></textarea>
+            </label>
+            <label>
+                Image URL
+                <input type="text" ng-model="article.image" />
+            </label>
+            <label>
+                Hide image for small media only?
+                <input type="checkbox" ng-model="article.hfso" ng-true-value="'T'" ng-false-value="'F'">
+            </label>
+        </div>
+        <a href="" ng-click="createArticle()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-video" class="row bumpPastTopbar">
+        <h4>Add a video</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Title
+                <input type="text" ng-model="video.title" />
+            </label>
+            <label>
+                Description
+                <textarea ng-model="video.description"></textarea>
+            </label>
+            <label>
+                Video URL
+                <input type="text" ng-model="video.link" />
+            </label>
+            <label>
+                Site Selection
+                <select ng-model="video.site">
+                    <option value="youtube" selected>Youtube</option>
+                    <option value="onsite">Onsite</option>
+                    <option value="">No Video Available</option>
+                </select>
+            </label>
+            <label>
+                Video Type
+                <select ng-model="video.type">
+                    <option value="video/ogg" selected>video/ogg</option>
+                    <option value="">Not Specified</option>
+                </select>
+            </label>
+        </div>
+        <a href="" ng-click="createVideo()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-ad" class="row bumpPastTopbar">
+        <h4>Add an ad</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Ad URL
+                <input type="text" ng-model="adLink" />
+            </label>
+        </div>
+        <a href="" ng-click="createAd()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-officer" class="row bumpPastTopbar">
+        <h4>Add an officer or board member</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Name
+                <input type="text" ng-model="officer.name" />
+            </label>
+            <label>
+                Description
+                <input type="text" ng-model="officer.description" />
+            </label>
+            <label>
+                Email
+                <input type="text" ng-model="officer.email" />
+            </label>
+            <label>
+                Photo URL
+                <input type="text" ng-model="officer.photo" />
+            </label>
+        </div>
+        <a href="" ng-click="createOfficer()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-service" class="row bumpPastTopbar">
+        <h4>Add a service phone number</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Text
+                <input type="text" ng-model="service.text" />
+            </label>
+        </div>
+        <a href="" ng-click="createService()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+    <div id="add-archive" class="row bumpPastTopbar">
+        <h4>Add an archive item</h4>
+        <div class="columns small-12 medium-12 large-12 left">
+            <label>
+                Title
+                <input type="text" ng-model="archive.title" />
+            </label>
+            <label>
+                Item URL
+                <input type="text" ng-model="archive.link" />
+            </label>
+        </div>
+        <a href="" ng-click="createArchive()" class="button tiny">Add</a>
+        <a href="" ng-click="gotoAnchor('top')" class="button tiny">TOP</a>
+    </div>
+
+</div>
+

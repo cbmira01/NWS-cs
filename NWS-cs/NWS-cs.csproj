@@ -251,11 +251,14 @@
     <Content Include="Scripts\Slick\slick.js" />
     <Content Include="Scripts\Slick\slick.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\AddContentSample.html" />
     <Content Include="Views\Archive\Content.cshtml" />
     <Content Include="Views\Article\Content.cshtml" />
     <Content Include="Views\Advertisement\Content.cshtml" />
     <Content Include="Views\Feature\Content.cshtml" />
     <None Include="Views\Officer\Content.cshtml" />
+    <Content Include="Views\DeleteContentSample.html" />
+    <Content Include="Views\OuterDivSample.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
