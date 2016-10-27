@@ -14,12 +14,9 @@
     </p>
 
     @{
-        int index = 0;
-        string[] colors = { "pastelA", "pastelB", "pastelC" };
         foreach (var item in Model)
         {
-            <div class="columns large-12 medium-12 small-12 panel 
-                 @Html.Raw(colors[index % colors.Length])">
+            <div class="columns large-12 medium-12 small-12 panel">
                 <div class="row">
                     <div class="column small-2 left">
                         <div class="row">
@@ -46,7 +43,6 @@
                     </div>
                 </div>
             </div>
-            index++;
         }
     }
 </div>
