@@ -15,24 +15,9 @@ namespace NWS_cs.Controllers
         private NwsContext db = new NwsContext();
 
         // GET: Service
-        public ActionResult Index()
+        public ActionResult Content()
         {
             return View(db.Services.ToList());
-        }
-
-        // GET: Service/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Service service = db.Services.Find(id);
-            if (service == null)
-            {
-                return HttpNotFound();
-            }
-            return View(service);
         }
 
         // GET: Service/Create
@@ -52,7 +37,7 @@ namespace NWS_cs.Controllers
             {
                 db.Services.Add(service);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(service);
@@ -84,7 +69,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(service).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(service);
         }
@@ -112,7 +97,7 @@ namespace NWS_cs.Controllers
             Service service = db.Services.Find(id);
             db.Services.Remove(service);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)

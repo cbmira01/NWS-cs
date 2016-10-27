@@ -288,9 +288,7 @@
     <Content Include="Views\Officer\Index.cshtml" />
     <Content Include="Views\Service\Create.cshtml" />
     <Content Include="Views\Service\Delete.cshtml" />
-    <Content Include="Views\Service\Details.cshtml" />
     <Content Include="Views\Service\Edit.cshtml" />
-    <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Video\Create.cshtml" />
     <Content Include="Views\Video\Delete.cshtml" />
     <Content Include="Views\Video\Details.cshtml" />
