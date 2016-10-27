@@ -25,21 +25,6 @@ namespace NWS_cs.Controllers
             return View(db.Officers.ToList());
         }
 
-        // GET: Officer/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Officer officer = db.Officers.Find(id);
-            if (officer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(officer);
-        }
-
         // GET: Officer/Create
         public ActionResult Create()
         {
@@ -57,7 +42,7 @@ namespace NWS_cs.Controllers
             {
                 db.Officers.Add(officer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(officer);
@@ -89,7 +74,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(officer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(officer);
         }
@@ -117,7 +102,7 @@ namespace NWS_cs.Controllers
             Officer officer = db.Officers.Find(id);
             db.Officers.Remove(officer);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)

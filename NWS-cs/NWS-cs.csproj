@@ -284,7 +284,6 @@
     <Content Include="Views\Feature\Edit.cshtml" />
     <Content Include="Views\Officer\Create.cshtml" />
     <Content Include="Views\Officer\Delete.cshtml" />
-    <Content Include="Views\Officer\Details.cshtml" />
     <Content Include="Views\Officer\Edit.cshtml" />
     <Content Include="Views\Officer\Index.cshtml" />
     <Content Include="Views\Service\Create.cshtml" />
