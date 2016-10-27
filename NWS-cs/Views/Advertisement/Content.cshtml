@@ -19,25 +19,17 @@
             <div class="columns large-12 medium-12 small-12 panel">
                 <div class="row">
                     <div class="column small-2 left">
-                        <div class="row">
-                            <a href='@Url.Action("Edit", "Advertisement", new { id=item.id })' 
-                               class="button tiny">
-                                Edit
-                            </a>
-                        </div>
-                        <div class="row">
-                            <a href='@Url.Action("Delete", "Advertisement", new { id=item.id })' 
-                               class="button tiny">
-                                Delete
-                            </a>
-                        </div>
+                        <a href='@Url.Action("Edit", "Advertisement", new { id=item.id })'>
+                            Edit
+                        </a>|
+                        <a href='@Url.Action("Delete", "Advertisement", new { id=item.id })'>
+                            Delete
+                        </a>
                     </div>
 
                     <div class="column small-10 left">
                         <div class="row">
                             <img class="smallPicture" src="~/@(Html.DisplayFor(modelItem => item.link))" alt="Ad image" />
-                        </div>
-                        <div class="row">
                             @Html.DisplayFor(modelItem => item.link)
                         </div>
                     </div>

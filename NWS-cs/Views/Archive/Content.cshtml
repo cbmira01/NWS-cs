@@ -1,38 +1,39 @@
 ﻿@model IEnumerable<NWS_cs.Archive>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Archive Content";
 }
 
-<h2>Index</h2>
+<div class="row bumpPastTopbar">
+    <h4>Manage content for Archives</h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.link)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        <a href='@Url.Action("Create", "Archive")' class="button tiny">
+            Create New
+        </a>
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.link)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @{
+        foreach (var item in Model)
+        {
+            <div class="columns large-12 medium-12 small-12 panel">
+                <div class="row">
+                    <div class="column small-2 left">
+                        <a href='@Url.Action("Edit", "Archive", new { id=item.id })'>
+                            Edit
+                        </a>|
+                        <a href='@Url.Action("Delete", "Archive", new { id=item.id })'>
+                            Delete
+                        </a>
+                    </div>
 
-</table>
+                    <div class="column small-10 left">
+                        <div class="row">
+                            @Html.DisplayFor(modelItem => item.link)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
