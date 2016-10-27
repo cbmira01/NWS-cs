@@ -7,9 +7,11 @@
 <div class="row bumpPastTopbar">
     <h4>Edit an Advertisement</h4>
 
-    @Html.LabelFor(model => model.link)
-    <div class="columns large-12 medium-12 small-12">
-        @Html.EditorFor(model => model.link)
+    <div>
+        @Html.LabelFor(model => model.link)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.link)
+        </div>
     </div>
 
     @using (Html.BeginForm())
