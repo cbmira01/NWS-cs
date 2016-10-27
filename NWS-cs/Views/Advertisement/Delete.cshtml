@@ -4,15 +4,16 @@
     ViewBag.Title = "Ad Delete";
 }
 
-
 <div class="row bumpPastTopbar">
     <h4>Delete an Advertisement</h4>
 
     <h5>Are you sure you want to delete this?</h5>
 
-    @Html.DisplayNameFor(model => model.link)
-    <div class="columns large-12 medium-12 small-12 panel">
-        @Html.DisplayFor(model => model.link)
+    <div>
+        @Html.DisplayNameFor(model => model.link)
+        <div class="columns small-12 panel">
+            @Html.DisplayFor(model => model.link)
+        </div>
     </div>
 
     @using (Html.BeginForm())
