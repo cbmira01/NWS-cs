@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Ad Create";
 }
+
 @using (Html.BeginForm())
 {
     <div class="row bumpPastTopbar">
@@ -10,7 +11,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.link)
-            <div class="column large-12 medium-12 small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.link)
             </div>
         </div>
