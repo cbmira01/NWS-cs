@@ -198,7 +198,6 @@
     <Content Include="Content\foundation\foundation.css" />
     <Content Include="Content\foundation\foundation.mvc.css" />
     <Content Include="Content\foundation\normalize.css" />
-    <None Include="Content\Site.css.original" />
     <Content Include="Content\Slick\ajax-loader.gif" />
     <Content Include="Content\Slick\fonts\slick.svg" />
     <Content Include="Content\Slick\slick-theme.css" />

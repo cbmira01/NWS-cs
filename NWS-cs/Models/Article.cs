@@ -24,7 +24,21 @@ namespace NWS_cs
         // Thanks to http://stackoverflow.com/a/9398315
         public string ShortText
         {
-            get { return text != null ? text.Substring(0, 100) + "..." : ""; }
+            get
+            {
+                if (text == null)
+                {
+                    return "";
+                }
+                else if (text.Length <= 100)
+                {
+                    return text;
+                }
+                else
+                {
+                    return text.Substring(0, 100) + "...";
+                }
+            }
         }
 
     }
