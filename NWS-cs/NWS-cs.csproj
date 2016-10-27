@@ -281,11 +281,7 @@
     <Content Include="Views\Article\Delete.cshtml" />
     <Content Include="Views\Article\Details.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
-    <Content Include="Views\Feature\Create.cshtml" />
-    <Content Include="Views\Feature\Delete.cshtml" />
-    <Content Include="Views\Feature\Details.cshtml" />
     <Content Include="Views\Feature\Edit.cshtml" />
-    <Content Include="Views\Feature\Index.cshtml" />
     <Content Include="Views\Officer\Create.cshtml" />
     <Content Include="Views\Officer\Delete.cshtml" />
     <Content Include="Views\Officer\Details.cshtml" />

@@ -14,25 +14,9 @@ namespace NWS_cs.Controllers
     {
         private NwsContext db = new NwsContext();
 
-        // GET: Feature
-        public ActionResult Index()
+        public ActionResult Content()
         {
             return View(db.Features.ToList());
-        }
-
-        // GET: Feature/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Feature feature = db.Features.Find(id);
-            if (feature == null)
-            {
-                return HttpNotFound();
-            }
-            return View(feature);
         }
 
         // GET: Feature/Create
@@ -52,7 +36,7 @@ namespace NWS_cs.Controllers
             {
                 db.Features.Add(feature);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
 
             return View(feature);
@@ -84,7 +68,7 @@ namespace NWS_cs.Controllers
             {
                 db.Entry(feature).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content");
             }
             return View(feature);
         }
@@ -112,7 +96,7 @@ namespace NWS_cs.Controllers
             Feature feature = db.Features.Find(id);
             db.Features.Remove(feature);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)
