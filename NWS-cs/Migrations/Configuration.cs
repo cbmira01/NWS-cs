@@ -183,10 +183,10 @@ namespace NWS_cs.Migrations
                 new Video {
                     id = 1,
                     site = "onsite",
-                    type = "video/ogg",
+                    type = "video/webm",
                     title = "Natural Gas",
                     description = "Large quantities of natural gas discovered in Deer Park neighborhood!",
-                    link = "Content/Videos/Natural_Gas_video.ogg"},
+                    link = "Content/Videos/Natural_Gas_video.webm"},
                 new Video {
                     id = 2,
                     site = "youtube",
