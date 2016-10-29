@@ -1,72 +1,51 @@
 ﻿@model NWS_cs.Article
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Article Edit";
 }
 
-<h2>Edit</h2>
+<div class="row bumpPastTopbar">
+    <h4>Edit an Article</h4>
 
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Article</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.id)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.uuid, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.uuid, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.uuid, "", new { @class = "text-danger" })
-            </div>
+    <div>
+        @Html.LabelFor(model => model.uuid)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.uuid)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.hfso, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hfso, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hfso, "", new { @class = "text-danger" })
-            </div>
+        @Html.LabelFor(model => model.hfso)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.hfso)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
-            </div>
+        @Html.LabelFor(model => model.title)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.title)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.image, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.image, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
-            </div>
+        @Html.LabelFor(model => model.image)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.image)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.text, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.text, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.text, "", new { @class = "text-danger" })
-            </div>
+        @Html.LabelFor(model => model.text)
+        <div class="columns small-12">
+            @Html.EditorFor(model => model.text)
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Content")
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <input type="submit" value="Save" class="button tiny" />
+        </div>
+
+        <a href='@Url.Action("Content", "Article")' class="button tiny">
+            Back to List
+        </a>
+    }
+
 </div>
 
 @section Scripts {
