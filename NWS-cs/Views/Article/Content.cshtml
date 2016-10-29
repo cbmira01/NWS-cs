@@ -19,10 +19,10 @@
             <div class="columns small-12 panel">
                 <div class="row">
                     <div class="column small-2 left">
-                        <a href='@Url.Action("Edit", "Article", new { id=item.id })'>
+                        <a href='@Url.Action("Edit", "Article", new { id = item.id })'>
                             Edit
                         </a>|
-                        <a href='@Url.Action("Delete", "Article", new { id=item.id })'>
+                        <a href='@Url.Action("Delete", "Article", new { id = item.id })'>
                             Delete
                         </a>
                     </div>
@@ -47,7 +47,7 @@
                             @Html.DisplayFor(modelItem => item.image)
                         </div>
                         <div>
-                            @(Html.DisplayFor(modelItem => item.text).ToString().Substring(0, 50))...
+                            @Html.DisplayFor(modelItem => item.Text50)
                         </div>
                     </div>
                 </div>

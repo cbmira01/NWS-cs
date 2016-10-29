@@ -18,7 +18,7 @@
                     }
                 </div>
                 <h5>@Html.DisplayFor(modelItem => item.title)</h5>
-                <p>@Html.DisplayFor(modelItem => item.text).ToString().Substring(0,100)</p>
+                <p>@Html.DisplayFor(modelItem => item.Text100)</p>
                 <a href="~/Read/Article?uuid=@(Html.DisplayFor(modelItem => item.uuid))" class="button tiny">Read More</a>
             </div>
             index++;            
