@@ -281,7 +281,6 @@
     <Content Include="Views\Archive\Edit.cshtml" />
     <Content Include="Views\Article\Create.cshtml" />
     <Content Include="Views\Article\Delete.cshtml" />
-    <Content Include="Views\Article\Details.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
     <Content Include="Views\Feature\Edit.cshtml" />
     <Content Include="Views\Officer\Create.cshtml" />

@@ -19,21 +19,6 @@ namespace NWS_cs.Controllers
             return View(db.Articles.ToList());
         }
 
-        // GET: Article/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Article article = db.Articles.Find(id);
-            if (article == null)
-            {
-                return HttpNotFound();
-            }
-            return View(article);
-        }
-
         // GET: Article/Create
         public ActionResult Create()
         {
@@ -41,10 +26,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Article/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,uuid,hfso,title,image,text")] Article article)
         {
             if (ModelState.IsValid)
@@ -73,10 +55,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Article/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,uuid,hfso,title,image,text")] Article article)
         {
             if (ModelState.IsValid)
@@ -105,7 +84,6 @@ namespace NWS_cs.Controllers
 
         // POST: Article/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Article article = db.Articles.Find(id);

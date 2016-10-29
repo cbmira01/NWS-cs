@@ -41,8 +41,8 @@ $(document).ready(function () {
         autoplayspeed: 3000,
         cssEase: 'linear',
         dots: true,
-        infinite: true,
         fade: true,
+        infinite: true,
         mobileFirst: true
     });
 });

@@ -1,56 +1,58 @@
 ﻿@model IEnumerable<NWS_cs.Article>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Article Content";
 }
 
-<h2>Index</h2>
+<div class="row bumpPastTopbar">
+    <h4>Manage Article Content</h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.uuid)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.hfso)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.text)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        <a href='@Url.Action("Create", "Article")' class="button tiny">
+            Create New
+        </a>
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.uuid)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.hfso)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.text)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @{
+        foreach (var item in Model)
+        {
+            <div class="columns small-12 panel">
+                <div class="row">
+                    <div class="column small-2 left">
+                        <a href='@Url.Action("Edit", "Article", new { id=item.id })'>
+                            Edit
+                        </a>|
+                        <a href='@Url.Action("Delete", "Article", new { id=item.id })'>
+                            Delete
+                        </a>
+                    </div>
 
-</table>
+                    <div class="column small-2 left">
+                        <div class="row">
+                            <img src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Ad image" />
+                        </div>
+                    </div>
+
+                    <div class="column small-8 left">
+                        <div>
+                            @Html.DisplayFor(modelItem => item.uuid)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.hfso)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.title)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.image)
+                        </div>
+                        <div>
+                            @(Html.DisplayFor(modelItem => item.text).ToString().Substring(0, 50))...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
