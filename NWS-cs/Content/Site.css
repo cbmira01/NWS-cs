@@ -11,7 +11,6 @@ a {
 
 a:focus, a:hover {
   outline: solid;
-  background: invert;
 }
 
 a:active {
@@ -145,20 +144,17 @@ footer {
 
 /* Media Queries
 ================================= */
-// Foundation media queries from http://foundation.zurb.com/docs/media-queries.html
+ /*Foundation media queries from http://foundation.zurb.com/docs/media-queries.html*/
 
-/*
-// Small screens,  up to 640px 
+/*Small screens,  up to 640px*/ 
 @media only screen and (max-width: 40em) { 
 }
 
-// Medium screens, 641px to 1024px 
+/*Medium screens, 641px to 1024px*/ 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { 
 }
 
-// Large screens,  1025px to 1440px and larger..
+/*Large screens,  1025px to 1440px and larger..*/
 @media only screen and (min-width: 64.063em) { 
 }
-
-*/
 
