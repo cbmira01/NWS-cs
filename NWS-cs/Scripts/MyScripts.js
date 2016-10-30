@@ -1,7 +1,8 @@
 ﻿"use strict";
 
-// Reactive feature for small media: restyle header bar.
-$(window).on("load resize", function (e) {
+// Reactive feature for small media: 
+//  restyle header bar and turn off panel equalization
+$(window).on("resize", function (e) {
     var dpnaElement = document.getElementById("dpnaText");
 
     if (dpnaElement === null) { return }
@@ -12,28 +13,34 @@ $(window).on("load resize", function (e) {
             equalizer : { equalize_on_stack: false }
         });
     }
-    else {
+    else {  // restore top-bar and equalization for non-small media
         dpnaElement.innerHTML = "Deer Park Neighborhood Association";
         $(document).foundation({
-            equalizer : { equalize_on_stack: true }
+            equalizer: {
+                equalize_on_stack: true,
+                act_on_hidden_el: true,
+                use_tallest: true
+            }
         });
+
+        window.location.href = window.location.href;
     }
 });  //end on-resize
   
 
-// Zurb foundation initialization, http://foundation.zurb.com/sites/docs/v/5.5.3/components/equalizer.html
 $(document).ready(function () {
+
+    // Zurb Foundation initialization, http://foundation.zurb.com/sites/docs/v/5.5.3/components/equalizer.html
     $(document).foundation({
         equalizer: {
-            // specify if equalizer should make elements equal height once they become stacked.
-            equalize_on_stack: true
+            // specify if equalizer should make elements equal height once they become stacked
+            equalize_on_stack: true,
+            // make sure hidden elements in the feature carousel get noticed 
+            act_on_hidden_el: true
         }
     });
-});
 
-
-// Initialize Slick Carousel.
-$(document).ready(function () {
+    // Initialize Slick Carousel
     $('.featureCarousel').slick({
         accessibility: true,
         arrows: true,
@@ -46,3 +53,4 @@ $(document).ready(function () {
         mobileFirst: true
     });
 });
+
