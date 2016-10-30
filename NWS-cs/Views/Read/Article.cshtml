@@ -6,11 +6,11 @@
     <div class="row" data-equalizer>
         @{
             var article = Model.ElementAt(0);
-            <div class="columns small-12 medium-6 large-6 greenA panel left" data-equalizer-watch>
+            <div class="column small-12 medium-6 large-6 greenA panel left" data-equalizer-watch>
                 <img src="~/@(Html.DisplayFor(modelItem => article.image))" alt="Article image" />
             </div>
 
-            <div class="columns small-12 medium-6 large-6 greenB panel left" data-equalizer-watch>
+            <div class="column small-12 medium-6 large-6 greenB panel left" data-equalizer-watch>
                 <h4>@(Html.DisplayFor(modelItem => article.title))</h4>
                 <p style="white-space:pre-wrap;">@(Html.DisplayFor(modelItem => article.text))</p>
             </div>

@@ -4,7 +4,6 @@
     ViewBag.Title = "Feature Edit";
 }
 
-
 @using (Html.BeginForm())
 {
     <div class="row bumpPastTopbar">
@@ -12,27 +11,27 @@
 
         <div>
             @Html.LabelFor(model => model.title)
-            <div class="columns small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.title)
             </div>
 
             @Html.LabelFor(model => model.article)
-            <div class="columns small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.article)
             </div>
 
             @Html.LabelFor(model => model.image1)
-            <div class="columns small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.image1)
             </div>
 
             @Html.LabelFor(model => model.image2)
-            <div class="columns small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.image2)
             </div>
 
             @Html.LabelFor(model => model.image3)
-            <div class="columns small-12">
+            <div class="column small-12">
                 @Html.EditorFor(model => model.image3)
             </div>
         </div>
