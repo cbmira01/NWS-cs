@@ -19,29 +19,6 @@ namespace NWS_cs.Controllers
             return View(db.Features.ToList());
         }
 
-        // GET: Feature/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Feature/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,article,image1,image2,image3,title")] Feature feature)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Features.Add(feature);
-                db.SaveChanges();
-                return RedirectToAction("Content");
-            }
-
-            return View(feature);
-        }
-
         // GET: Feature/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -58,10 +35,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Feature/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,article,image1,image2,image3,title")] Feature feature)
         {
             if (ModelState.IsValid)
@@ -71,32 +45,6 @@ namespace NWS_cs.Controllers
                 return RedirectToAction("Content");
             }
             return View(feature);
-        }
-
-        // GET: Feature/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Feature feature = db.Features.Find(id);
-            if (feature == null)
-            {
-                return HttpNotFound();
-            }
-            return View(feature);
-        }
-
-        // POST: Feature/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Feature feature = db.Features.Find(id);
-            db.Features.Remove(feature);
-            db.SaveChanges();
-            return RedirectToAction("Content");
         }
 
         protected override void Dispose(bool disposing)

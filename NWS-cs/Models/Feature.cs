@@ -19,5 +19,20 @@ namespace NWS_cs
         public string image3 { get; set; }
 
         public string title { get; set; }
+
+        public string Text50
+        {
+            get
+            {
+                if (article == null)
+                {
+                    return "";
+                }
+                else
+                {
+                    return (article.Substring(0, Math.Min(article.Length, 50)) + "...");
+                }
+            }
+        }
     }
 }

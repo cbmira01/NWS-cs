@@ -4,17 +4,18 @@
 //  restyle header bar and turn off panel equalization
 $(window).on("resize", function (e) {
     var dpnaElement = document.getElementById("dpnaText");
-
     if (dpnaElement === null) { return }
 
     if (Modernizr.mq('(max-width: 40em)')) { // if media is small-only
         dpnaElement.innerHTML = "DPNA";
+
         $(document).foundation({
             equalizer : { equalize_on_stack: false }
         });
     }
     else {  // restore top-bar and equalization for non-small media
         dpnaElement.innerHTML = "Deer Park Neighborhood Association";
+
         $(document).foundation({
             equalizer: {
                 equalize_on_stack: true,
@@ -23,6 +24,7 @@ $(window).on("resize", function (e) {
             }
         });
 
+        // Page reload allows Foundation panels to resize with Slick Carousel images
         window.location.href = window.location.href;
     }
 });  //end on-resize
@@ -40,7 +42,7 @@ $(document).ready(function () {
         }
     });
 
-    // Initialize Slick Carousel
+    // Slick Carousel settings, http://kenwheeler.github.io/slick/
     $('.featureCarousel').slick({
         accessibility: true,
         arrows: true,

@@ -1,34 +1,38 @@
 ﻿@model IEnumerable<NWS_cs.Feature>
 
-<div class="row" data-equalizer="eq-feature">
-    @{
-        var feature = Model.ElementAt(0);
-        <div class="columns small-12 medium-6 large-6 
-             featureColorImage 
-             panel"
-             data-equalizer-watch="eq-feature">
+@{
+    var feature = Model.ElementAt(0);
 
-            <div class="featureCarousel slick-slider">
-                <div class="image">
-                    <img src="~/@(feature.image1)" alt="Carousel slide 1" />
+    <div class="row" data-equalizer="eq-feature">
+
+            <div class="columns small-12 medium-6 large-6 
+                 featureColorImage 
+                 panel"
+                 data-equalizer-watch="eq-feature">
+
+                <div class="featureCarousel slick-slider">
+                    <div class="image">
+                        <img src="~/@(feature.image1)" alt="Carousel slide 1" />
+                    </div>
+                    <div class="image">
+                        <img src="~/@(feature.image2)" alt="Carousel slide 2" />
+                    </div>
+                    <div class="image">
+                        <img src="~/@(feature.image3)" alt="Carousel slide 3" />
+                    </div>
                 </div>
-                <div class="image">
-                    <img src="~/@(feature.image2)" alt="Carousel slide 2" />
-                </div>
-                <div class="image">
-                    <img src="~/@(feature.image3)" alt="Carousel slide 3" />
-                </div>
+
             </div>
 
-        </div>
+            <div class="columns small-12 medium-6 large-6 
+                 featureColorText 
+                 panel"
+                 data-equalizer-watch="eq-feature">
 
-        <div class="columns small-12 medium-6 large-6 
-             featureColorText 
-             panel"
-             data-equalizer-watch="eq-feature">
+                <h4>@(feature.title)</h4>
+                <p style="white-space:pre-wrap;">@(feature.article)</p>
+            </div>
 
-            <h4>@(feature.title)</h4>
-            <p style="white-space:pre-wrap;">@(feature.article)</p>
-        </div>
-     }
-</div>
+    </div>
+}
+

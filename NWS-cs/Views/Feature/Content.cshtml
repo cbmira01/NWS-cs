@@ -1,52 +1,46 @@
 ﻿@model IEnumerable<NWS_cs.Feature>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Feature Content";
 }
 
-<h2>Index</h2>
+@{ 
+    var feature = Model.ElementAt(0);
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.article)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th></th>
-    </tr>
+    <div class="row bumpPastTopbar">
+        <h4>Manage Feature Content</h4>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.article)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id })
-        </td>
-    </tr>
+        <div class="columns small-12 panel">
+            <div class="row">
+                <div class="column small-2 left">
+                    <a href='@Url.Action("Edit", "Feature", new { id = feature.id })'>
+                        Edit
+                    </a>
+                </div>
+
+                <div class="column small-2 left">
+                    <div class="row">
+                        <img src="~/@(feature.image1)" alt="Carousel slide 1" />
+                    </div>
+                    <div class="row">
+                        <img src="~/@(feature.image2)" alt="Carousel slide 2" />
+                    </div>
+                    <div class="row">
+                        <img src="~/@(feature.image3)" alt="Carousel slide 3" />
+                    </div>
+                </div>
+
+                <div class="column small-8 left">
+                    <div>
+                        @Html.DisplayFor(modelItem => feature.title)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(modelItem => feature.article)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 }
 
-</table>
