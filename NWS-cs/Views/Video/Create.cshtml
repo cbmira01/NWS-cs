@@ -1,71 +1,52 @@
-﻿@model NWS_cs.Video
+﻿@model NWS_cs.Article
+
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Article Create";
 }
 
-<h2>Create</h2>
-
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Video</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row bumpPastTopbar">
+        <h4>Create an Advertisement</h4>
+
         <div class="form-group">
-            @Html.LabelFor(model => model.site, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.site, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.site, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.uuid)
+            <div class="column small-12">
+                @Html.EditorFor(model => model.uuid)
+            </div>
+
+            @Html.LabelFor(model => model.hfso)
+            <div class="column small-12">
+                @Html.EditorFor(model => model.hfso)
+            </div>
+
+            @Html.LabelFor(model => model.title)
+            <div class="column small-12">
+                @Html.EditorFor(model => model.title)
+            </div>
+
+            @Html.LabelFor(model => model.image)
+            <div class="column small-12">
+                @Html.EditorFor(model => model.image)
+            </div>
+
+            @Html.LabelFor(model => model.text)
+            <div class="column small-12">
+                @Html.EditorFor(model => model.text)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.type, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.type, "", new { @class = "text-danger" })
-            </div>
+            <input type="submit" value="Create" class="button tiny" />
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <a href='@Url.Action("Content", "Article")' class="button tiny">
+            Back to List
+        </a>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.link, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.link, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.link, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Content")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

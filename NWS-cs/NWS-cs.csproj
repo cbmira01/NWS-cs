@@ -256,7 +256,7 @@
     <Content Include="Views\Article\Content.cshtml" />
     <Content Include="Views\Advertisement\Content.cshtml" />
     <Content Include="Views\Feature\Content.cshtml" />
-    <None Include="Views\Officer\Content.cshtml" />
+    <None Include="Views\Officer.original\Content.cshtml" />
     <Content Include="Views\DeleteContentSample.html" />
     <Content Include="Views\OuterDivSample.html" />
     <Content Include="Web.config">
@@ -283,16 +283,16 @@
     <Content Include="Views\Article\Delete.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
     <Content Include="Views\Feature\Edit.cshtml" />
-    <Content Include="Views\Officer\Create.cshtml" />
-    <Content Include="Views\Officer\Delete.cshtml" />
-    <Content Include="Views\Officer\Edit.cshtml" />
-    <Content Include="Views\Officer\Index.cshtml" />
-    <Content Include="Views\Service\Create.cshtml" />
-    <Content Include="Views\Service\Delete.cshtml" />
-    <Content Include="Views\Service\Edit.cshtml" />
-    <Content Include="Views\Video\Create.cshtml" />
-    <Content Include="Views\Video\Delete.cshtml" />
-    <Content Include="Views\Video\Edit.cshtml" />
+    <Content Include="Views\Officer.original\Create.cshtml" />
+    <Content Include="Views\Officer.original\Delete.cshtml" />
+    <Content Include="Views\Officer.original\Edit.cshtml" />
+    <Content Include="Views\Officer.original\Index.cshtml" />
+    <Content Include="Views\Service.original\Create.cshtml" />
+    <Content Include="Views\Service.original\Delete.cshtml" />
+    <Content Include="Views\Service.original\Edit.cshtml" />
+    <Content Include="Views\Video.original\Create.cshtml" />
+    <Content Include="Views\Video.original\Delete.cshtml" />
+    <Content Include="Views\Video.original\Edit.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\_ArticlePartial.cshtml" />
@@ -301,8 +301,20 @@
     <Content Include="Views\Home\_FeaturePartial.cshtml" />
     <Content Include="Views\Read\Article.cshtml" />
     <Content Include="Views\Edit\Index.cshtml" />
+    <Content Include="Views\Service.original\Content.cshtml" />
+    <Content Include="Views\Video.original\Content.cshtml" />
+    <Content Include="Views\Officer\Content.cshtml" />
+    <Content Include="Views\Officer\Create.cshtml" />
+    <Content Include="Views\Officer\Delete.cshtml" />
+    <Content Include="Views\Officer\Edit.cshtml" />
     <Content Include="Views\Service\Content.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\Service\Delete.cshtml" />
+    <Content Include="Views\Service\Edit.cshtml" />
     <Content Include="Views\Video\Content.cshtml" />
+    <Content Include="Views\Video\Create.cshtml" />
+    <Content Include="Views\Video\Delete.cshtml" />
+    <Content Include="Views\Video\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
