@@ -1,14 +1,14 @@
-﻿@model IEnumerable<NWS_cs.Article>
+﻿@model IEnumerable<NWS_cs.Service>
 
 @{
-    ViewBag.Title = "Article Content";
+    ViewBag.Title = "Service Content";
 }
 
 <div class="row bumpPastTopbar">
-    <h4>Manage Article Content</h4>
+    <h4>Manage Officer Content</h4>
 
     <p>
-        <a href='@Url.Action("Create", "Article")' class="button tiny">
+        <a href='@Url.Action("Create", "Service")' class="button tiny">
             Create New
         </a>
     </p>
@@ -19,35 +19,17 @@
             <div class="columns small-12 panel">
                 <div class="row">
                     <div class="column small-2 left">
-                        <a href='@Url.Action("Edit", "Article", new { id = item.id })'>
+                        <a href='@Url.Action("Edit", "Service", new { id = item.id })'>
                             Edit
                         </a>|
-                        <a href='@Url.Action("Delete", "Article", new { id = item.id })'>
+                        <a href='@Url.Action("Delete", "Service", new { id = item.id })'>
                             Delete
                         </a>
                     </div>
 
-                    <div class="column small-2 left">
-                        <div class="row">
-                            <img src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Ad image" />
-                        </div>
-                    </div>
-
-                    <div class="column small-8 left">
+                    <div class="column small-10 left">
                         <div>
-                            @Html.DisplayFor(modelItem => item.uuid)
-                        </div>
-                        <div>
-                            @Html.DisplayFor(modelItem => item.hfso)
-                        </div>
-                        <div>
-                            @Html.DisplayFor(modelItem => item.title)
-                        </div>
-                        <div>
-                            @Html.DisplayFor(modelItem => item.image)
-                        </div>
-                        <div>
-                            @Html.DisplayFor(modelItem => item.Text50)
+                            @Html.DisplayFor(modelItem => item.text)
                         </div>
                     </div>
                 </div>

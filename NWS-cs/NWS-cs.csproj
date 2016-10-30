@@ -307,14 +307,14 @@
     <Content Include="Views\Officer\Create.cshtml" />
     <Content Include="Views\Officer\Delete.cshtml" />
     <Content Include="Views\Officer\Edit.cshtml" />
-    <Content Include="Views\Service\Content.cshtml" />
-    <Content Include="Views\Service\Create.cshtml" />
-    <Content Include="Views\Service\Delete.cshtml" />
-    <Content Include="Views\Service\Edit.cshtml" />
     <Content Include="Views\Video\Content.cshtml" />
     <Content Include="Views\Video\Create.cshtml" />
     <Content Include="Views\Video\Delete.cshtml" />
     <Content Include="Views\Video\Edit.cshtml" />
+    <Content Include="Views\Service\Content.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\Service\Delete.cshtml" />
+    <Content Include="Views\Service\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />

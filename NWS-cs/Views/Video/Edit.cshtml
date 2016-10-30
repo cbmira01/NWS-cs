@@ -1,47 +1,41 @@
-﻿@model NWS_cs.Article
+﻿@model NWS_cs.Officer
 
 @{
-    ViewBag.Title = "Article Edit";
+    ViewBag.Title = "Officer Edit";
 }
 
 @using (Html.BeginForm())
 {
     <div class="row bumpPastTopbar">
-        <h4>Edit an Article</h4>
+        <h4>Edit an Officer</h4>
 
         <div>
-            @Html.LabelFor(model => model.uuid)
+            @Html.LabelFor(model => model.name)
             <div class="columns small-12">
-                @Html.EditorFor(model => model.uuid)
+                @Html.EditorFor(model => model.name)
             </div>
 
-            @Html.LabelFor(model => model.hfso)
+            @Html.LabelFor(model => model.email)
             <div class="columns small-12">
-                @Html.EditorFor(model => model.hfso)
+                @Html.EditorFor(model => model.email)
             </div>
 
-            @Html.LabelFor(model => model.title)
+            @Html.LabelFor(model => model.description)
             <div class="columns small-12">
-                @Html.EditorFor(model => model.title)
+                @Html.EditorFor(model => model.description)
             </div>
 
-            @Html.LabelFor(model => model.image)
+            @Html.LabelFor(model => model.photo)
             <div class="columns small-12">
-                @Html.EditorFor(model => model.image)
+                @Html.EditorFor(model => model.photo)
             </div>
-
-            @Html.LabelFor(model => model.text)
-            <div class="columns small-12">
-                @Html.EditorFor(model => model.text)
-            </div>
-
         </div>
 
         <div class="form-group">
             <input type="submit" value="Save" class="button tiny" />
         </div>
 
-        <a href='@Url.Action("Content", "Article")' class="button tiny">
+        <a href='@Url.Action("Content", "Officer")' class="button tiny">
             Back to List
         </a>
 

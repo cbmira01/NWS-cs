@@ -1,36 +1,15 @@
-﻿@model NWS_cs.Article
-
+﻿@model NWS_cs.Service
 
 @{
-    ViewBag.Title = "Article Create";
+    ViewBag.Title = "Service Create";
 }
 
 @using (Html.BeginForm())
 {
     <div class="row bumpPastTopbar">
-        <h4>Create an Advertisement</h4>
+        <h4>Create a Service</h4>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.uuid)
-            <div class="column small-12">
-                @Html.EditorFor(model => model.uuid)
-            </div>
-
-            @Html.LabelFor(model => model.hfso)
-            <div class="column small-12">
-                @Html.EditorFor(model => model.hfso)
-            </div>
-
-            @Html.LabelFor(model => model.title)
-            <div class="column small-12">
-                @Html.EditorFor(model => model.title)
-            </div>
-
-            @Html.LabelFor(model => model.image)
-            <div class="column small-12">
-                @Html.EditorFor(model => model.image)
-            </div>
-
             @Html.LabelFor(model => model.text)
             <div class="column small-12">
                 @Html.EditorFor(model => model.text)
@@ -41,7 +20,7 @@
             <input type="submit" value="Create" class="button tiny" />
         </div>
 
-        <a href='@Url.Action("Content", "Article")' class="button tiny">
+        <a href='@Url.Action("Content", "Service")' class="button tiny">
             Back to List
         </a>
 

@@ -1,60 +1,36 @@
-﻿@model NWS_cs.Article
+﻿@model NWS_cs.Service
 
 @{
-    ViewBag.Title = "Article Delete";
+    ViewBag.Title = "Service Delete";
 }
 
-<div class="row bumpPastTopbar">
-    <h4>Delete an Archive Item</h4>
+@using (Html.BeginForm())
+{
+    <div class="row bumpPastTopbar">
+        <h4>Delete a Service</h4>
 
-    <h5>Are you sure you want to delete this?</h5>
+        <h5>Are you sure you want to delete this?</h5>
 
-    <div>
-        @Html.DisplayNameFor(model => model.uuid)
         <div class="columns small-12 panel">
-            @Html.DisplayFor(model => model.uuid)
+            <div class="row">
+                <div class="column small-10 small-offset-2 left">
+                    <div>
+                        @Html.DisplayFor(model => model.text)
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div>
-        @Html.DisplayNameFor(model => model.hfso)
-        <div class="columns small-12 panel">
-            @Html.DisplayFor(model => model.hfso)
-        </div>
-    </div>
-
-    <div>
-        @Html.DisplayNameFor(model => model.title)
-        <div class="columns small-12 panel">
-            @Html.DisplayFor(model => model.title)
-        </div>
-    </div>
-
-    <div>
-        @Html.DisplayNameFor(model => model.image)
-        <div class="columns small-12 panel">
-            @Html.DisplayFor(model => model.image)
-        </div>
-    </div>
-
-    <div>
-        @Html.DisplayNameFor(model => model.text)
-        <div class="columns small-12 panel">
-            @Html.DisplayFor(model => model.text)
-        </div>
-    </div>
-
-    @using (Html.BeginForm())
-    {
         <div class="form-group">
             <input type="submit" value="Delete" class="button tiny" />
         </div>
 
-        <a href='@Url.Action("Content", "Article")' class="button tiny">
+        <a href='@Url.Action("Content", "Service")' class="button tiny">
             Back to List
         </a>
-    }
-</div>
+
+    </div>
+}
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
