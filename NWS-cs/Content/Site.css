@@ -136,9 +136,14 @@ footer {
   color: silver;
 }
 
-.CL-banner {
+img.CL-banner {
   height: 20%;
   width: 20%;
+
+  /*grayed-out Code Louisville banner, thanks to http://stackoverflow.com/a/288532*/
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  zoom: 1;
 }
 
 
