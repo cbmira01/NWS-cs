@@ -55,7 +55,6 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Advertisement/Edit/5
-
         [HttpPost]
         public ActionResult Edit([Bind(Include = "id,link")] Advertisement advertisement)
         {

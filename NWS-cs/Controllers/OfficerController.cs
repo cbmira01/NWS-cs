@@ -32,10 +32,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Officer/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,name,email,description,photo")] Officer officer)
         {
             if (ModelState.IsValid)
@@ -64,10 +61,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Officer/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,name,email,description,photo")] Officer officer)
         {
             if (ModelState.IsValid)
@@ -96,7 +90,6 @@ namespace NWS_cs.Controllers
 
         // POST: Officer/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Officer officer = db.Officers.Find(id);

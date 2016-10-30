@@ -15,6 +15,11 @@ namespace NWS_cs.Controllers
         private NwsContext db = new NwsContext();
 
         // GET: Service
+        public ActionResult Index()
+        {
+            return View(db.Services.ToList());
+        }
+
         public ActionResult Content()
         {
             return View(db.Services.ToList());
@@ -27,10 +32,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Service/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,text")] Service service)
         {
             if (ModelState.IsValid)
@@ -59,10 +61,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Service/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,text")] Service service)
         {
             if (ModelState.IsValid)
@@ -91,7 +90,6 @@ namespace NWS_cs.Controllers
 
         // POST: Service/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Service service = db.Services.Find(id);

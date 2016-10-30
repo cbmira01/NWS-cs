@@ -27,10 +27,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Video/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,site,type,title,description,link")] Video video)
         {
             if (ModelState.IsValid)
@@ -59,10 +56,7 @@ namespace NWS_cs.Controllers
         }
 
         // POST: Video/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,site,type,title,description,link")] Video video)
         {
             if (ModelState.IsValid)
@@ -91,7 +85,6 @@ namespace NWS_cs.Controllers
 
         // POST: Video/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Video video = db.Videos.Find(id);
