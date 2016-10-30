@@ -1,36 +1,33 @@
-﻿@model NWS_cs.Officer
+﻿@model NWS_cs.Video
 
 @{
-    ViewBag.Title = "Officer Delete";
+    ViewBag.Title = "Video Delete";
 }
 
 @using (Html.BeginForm())
 {
     <div class="row bumpPastTopbar">
-        <h4>Delete an Officer</h4>
+        <h4>Delete a Video</h4>
 
         <h5>Are you sure you want to delete this?</h5>
 
         <div class="columns small-12 panel">
             <div class="row">
-                <div class="column small-2 small-offset-2 left">
-                    <div class="row">
-                        <img src="~/@(Html.DisplayFor(model => model.photo))" alt="Officer image" />
-                    </div>
-                </div>
-
-                <div class="column small-8 left">
+                <div class="column small-10 small-offset-2 left">
                     <div>
-                        @Html.DisplayFor(model => model.name)
+                        @Html.DisplayFor(model => model.site)
                     </div>
                     <div>
-                        @Html.DisplayFor(model => model.email)
+                        @Html.DisplayFor(model => model.type)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(model => model.title)
                     </div>
                     <div>
                         @Html.DisplayFor(model => model.description)
                     </div>
                     <div>
-                        @Html.DisplayFor(model => model.photo)
+                        @Html.DisplayFor(model => model.link)
                     </div>
                 </div>
             </div>
@@ -40,7 +37,7 @@
             <input type="submit" value="Delete" class="button tiny" />
         </div>
 
-        <a href='@Url.Action("Content", "Officer")' class="button tiny">
+        <a href='@Url.Action("Content", "Video")' class="button tiny">
             Back to List
         </a>
 

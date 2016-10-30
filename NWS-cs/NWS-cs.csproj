@@ -256,7 +256,6 @@
     <Content Include="Views\Article\Content.cshtml" />
     <Content Include="Views\Advertisement\Content.cshtml" />
     <Content Include="Views\Feature\Content.cshtml" />
-    <None Include="Views\Officer.original\Content.cshtml" />
     <Content Include="Views\DeleteContentSample.html" />
     <Content Include="Views\OuterDivSample.html" />
     <Content Include="Web.config">
@@ -283,13 +282,6 @@
     <Content Include="Views\Article\Delete.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
     <Content Include="Views\Feature\Edit.cshtml" />
-    <Content Include="Views\Officer.original\Create.cshtml" />
-    <Content Include="Views\Officer.original\Delete.cshtml" />
-    <Content Include="Views\Officer.original\Edit.cshtml" />
-    <Content Include="Views\Officer.original\Index.cshtml" />
-    <Content Include="Views\Service.original\Create.cshtml" />
-    <Content Include="Views\Service.original\Delete.cshtml" />
-    <Content Include="Views\Service.original\Edit.cshtml" />
     <Content Include="Views\Video.original\Create.cshtml" />
     <Content Include="Views\Video.original\Delete.cshtml" />
     <Content Include="Views\Video.original\Edit.cshtml" />
@@ -301,7 +293,6 @@
     <Content Include="Views\Home\_FeaturePartial.cshtml" />
     <Content Include="Views\Read\Article.cshtml" />
     <Content Include="Views\Edit\Index.cshtml" />
-    <Content Include="Views\Service.original\Content.cshtml" />
     <Content Include="Views\Video.original\Content.cshtml" />
     <Content Include="Views\Officer\Content.cshtml" />
     <Content Include="Views\Officer\Create.cshtml" />

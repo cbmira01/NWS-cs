@@ -1,14 +1,14 @@
-﻿@model IEnumerable<NWS_cs.Officer>
+﻿@model IEnumerable<NWS_cs.Video>
 
 @{
-    ViewBag.Title = "Officer Content";
+    ViewBag.Title = "Video Content";
 }
 
 <div class="row bumpPastTopbar">
     <h4>Manage Officer Content</h4>
 
     <p>
-        <a href='@Url.Action("Create", "Officer")' class="button tiny">
+        <a href='@Url.Action("Create", "Video")' class="button tiny">
             Create New
         </a>
     </p>
@@ -19,32 +19,29 @@
             <div class="columns small-12 panel">
                 <div class="row">
                     <div class="column small-2 left">
-                        <a href='@Url.Action("Edit", "Officer", new { id = item.id })'>
+                        <a href='@Url.Action("Edit", "Video", new { id = item.id })'>
                             Edit
                         </a>|
-                        <a href='@Url.Action("Delete", "Officer", new { id = item.id })'>
+                        <a href='@Url.Action("Delete", "Video", new { id = item.id })'>
                             Delete
                         </a>
                     </div>
 
-                    <div class="column small-2 left">
-                        <div class="row">
-                            <img src="~/@(Html.DisplayFor(modelItem => item.photo))" alt="Officer image" />
-                        </div>
-                    </div>
-
-                    <div class="column small-8 left">
+                    <div class="column small-10 left">
                         <div>
-                            @Html.DisplayFor(modelItem => item.name)
+                            @Html.DisplayFor(modelItem => item.site)
                         </div>
                         <div>
-                            @Html.DisplayFor(modelItem => item.email)
+                            @Html.DisplayFor(modelItem => item.type)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.title)
                         </div>
                         <div>
                             @Html.DisplayFor(modelItem => item.description)
                         </div>
                         <div>
-                            @Html.DisplayFor(modelItem => item.photo)
+                            @Html.DisplayFor(modelItem => item.link)
                         </div>
                     </div>
                 </div>
