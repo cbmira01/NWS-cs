@@ -4,25 +4,25 @@
     ViewBag.Title = "Archive Edit";
 }
 
-<div class="row bumpPastTopbar">
-    <h4>Edit an Archive Item</h4>
+@using (Html.BeginForm())
+{
+    <div class="row bumpPastTopbar">
+        <h4>Edit an Archive Item</h4>
 
-    <div>
-        @Html.LabelFor(model => model.title)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.title)
+        <div>
+            @Html.LabelFor(model => model.title)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.title)
+            </div>
         </div>
-    </div>
 
-    <div>
-        @Html.LabelFor(model => model.link)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.link)
+        <div>
+            @Html.LabelFor(model => model.link)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.link)
+            </div>
         </div>
-    </div>
 
-    @using (Html.BeginForm())
-    {
         <div class="form-group">
             <input type="submit" value="Save" class="button tiny" />
         </div>
@@ -30,9 +30,9 @@
         <a href='@Url.Action("Content", "Archive")' class="button tiny">
             Back to List
         </a>
-    }
 
-</div>
+    </div>
+}
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

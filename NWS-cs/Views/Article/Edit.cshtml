@@ -4,39 +4,39 @@
     ViewBag.Title = "Article Edit";
 }
 
-<div class="row bumpPastTopbar">
-    <h4>Edit an Article</h4>
+@using (Html.BeginForm())
+{
+    <div class="row bumpPastTopbar">
+        <h4>Edit an Article</h4>
 
-    <div>
-        @Html.LabelFor(model => model.uuid)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.uuid)
+        <div>
+            @Html.LabelFor(model => model.uuid)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.uuid)
+            </div>
+
+            @Html.LabelFor(model => model.hfso)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.hfso)
+            </div>
+
+            @Html.LabelFor(model => model.title)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.title)
+            </div>
+
+            @Html.LabelFor(model => model.image)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.image)
+            </div>
+
+            @Html.LabelFor(model => model.text)
+            <div class="columns small-12">
+                @Html.EditorFor(model => model.text)
+            </div>
+
         </div>
 
-        @Html.LabelFor(model => model.hfso)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.hfso)
-        </div>
-
-        @Html.LabelFor(model => model.title)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.title)
-        </div>
-
-        @Html.LabelFor(model => model.image)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.image)
-        </div>
-
-        @Html.LabelFor(model => model.text)
-        <div class="columns small-12">
-            @Html.EditorFor(model => model.text)
-        </div>
-
-    </div>
-
-    @using (Html.BeginForm())
-    {
         <div class="form-group">
             <input type="submit" value="Save" class="button tiny" />
         </div>
@@ -44,9 +44,9 @@
         <a href='@Url.Action("Content", "Article")' class="button tiny">
             Back to List
         </a>
-    }
 
-</div>
+    </div>
+}
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
