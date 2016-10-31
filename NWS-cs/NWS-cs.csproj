@@ -303,7 +303,6 @@
     <Content Include="Views\Archive\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\Archives\" />
     <Folder Include="Content\foundation-icons\" />
     <Folder Include="Content\Images\" />

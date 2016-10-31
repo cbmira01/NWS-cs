@@ -51,9 +51,14 @@
                         <div>
                             @Html.DisplayFor(modelItem => item.uuid)
                         </div>
-                        <div>
-                            @Html.DisplayFor(modelItem => item.hfso)
-                        </div>
+
+                        @if (item.hfso)
+                        {
+                            <div>
+                                @Html.Raw("Image is hidden for small media only.")
+                            </div>
+                        }
+
                         <div>
                             @Html.DisplayFor(modelItem => item.title)
                         </div>

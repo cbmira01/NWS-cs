@@ -12,10 +12,10 @@ namespace NWS_cs
 
         public string uuid { get; set; }
 
-        [StringLength(1)]
-        public string hfso { get; set; }
+        // hfso indicates an image that is hidden for small media only
+        public bool hfso { get; set; }
 
-        public string title { get; set; }
+         public string title { get; set; }
 
         public string image { get; set; }
 

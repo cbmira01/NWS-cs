@@ -21,11 +21,7 @@ namespace NWS_cs
         public virtual DbSet<Video> Videos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Article>()
-                .Property(e => e.hfso)
-                .IsFixedLength()
-                .IsUnicode(false);
+        {    
         }
     }
 }

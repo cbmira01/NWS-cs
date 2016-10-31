@@ -25,7 +25,7 @@
                  @Html.Raw(colors[index % colors.Length])"
                  data-equalizer-watch="eq-inline">
                 <div>
-                    @if (item.hfso == "T") {
+                    @if (item.hfso) {
                         <img class="hide-for-small-only" src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />
                     } else {
                         <img src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />

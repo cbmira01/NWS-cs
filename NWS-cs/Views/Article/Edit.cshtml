@@ -15,11 +15,6 @@
                 @Html.EditorFor(model => model.uuid)
             </div>
 
-            @Html.LabelFor(model => model.hfso)
-            <div class="column small-12">
-                @Html.EditorFor(model => model.hfso)
-            </div>
-
             @Html.LabelFor(model => model.title)
             <div class="column small-12">
                 @Html.EditorFor(model => model.title)
@@ -34,6 +29,11 @@
             <div class="column small-12">
                 @Html.EditorFor(model => model.text)
             </div>
+
+           <p>Hide for small media only?
+                @Html.CheckBoxFor(model => model.hfso)
+           </p>
+
         </div>
 
         <div class="form-group">
