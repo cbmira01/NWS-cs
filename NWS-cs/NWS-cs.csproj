@@ -299,6 +299,7 @@
     <Content Include="Views\Service\Delete.cshtml" />
     <Content Include="Views\Service\Edit.cshtml" />
     <Content Include="Views\Officer\Index.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
