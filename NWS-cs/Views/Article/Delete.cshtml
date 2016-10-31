@@ -11,38 +11,31 @@
 
         <h5>Are you sure you want to delete this?</h5>
 
-        <div>
-            @Html.DisplayNameFor(model => model.uuid)
-            <div class="column small-12 panel">
-                @Html.DisplayFor(model => model.uuid)
-            </div>
-        </div>
+        <div class="column small-12 panel">
+            <div class="row">
+                <div class="column small-2 small-offset-2 left">
+                    <div class="row">
+                        <img src="~/@(Html.DisplayFor(model => model.image))" alt="Article image" />
+                    </div>
+                </div>
 
-        <div>
-            @Html.DisplayNameFor(model => model.hfso)
-            <div class="column small-12 panel">
-                @Html.DisplayFor(model => model.hfso)
-            </div>
-        </div>
-
-        <div>
-            @Html.DisplayNameFor(model => model.title)
-            <div class="column small-12 panel">
-                @Html.DisplayFor(model => model.title)
-            </div>
-        </div>
-
-        <div>
-            @Html.DisplayNameFor(model => model.image)
-            <div class="column small-12 panel">
-                @Html.DisplayFor(model => model.image)
-            </div>
-        </div>
-
-        <div>
-            @Html.DisplayNameFor(model => model.text)
-            <div class="column small-12 panel">
-                @Html.DisplayFor(model => model.text)
+                <div class="column small-8 left">
+                    <div>
+                        @Html.DisplayFor(model => model.uuid)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(model => model.hfso)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(model => model.title)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(model => model.image)
+                    </div>
+                    <div>
+                        @Html.DisplayFor(model => model.text)
+                    </div>
+                </div>
             </div>
         </div>
 
