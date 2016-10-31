@@ -10,6 +10,8 @@ namespace NWS_cs
     {
         public int id { get; set; }
 
+        // Thanks to http://stackoverflow.com/a/4927032
+        [DataType(DataType.MultilineText)]
         public string article { get; set; }
 
         public string image1 { get; set; }

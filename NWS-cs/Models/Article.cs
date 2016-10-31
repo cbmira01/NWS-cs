@@ -19,6 +19,8 @@ namespace NWS_cs
 
         public string image { get; set; }
 
+        // Thanks to http://stackoverflow.com/a/4927032
+        [DataType(DataType.MultilineText)]
         public string text { get; set; }
 
     }
