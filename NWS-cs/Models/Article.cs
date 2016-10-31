@@ -21,34 +21,5 @@ namespace NWS_cs
 
         public string text { get; set; }
 
-        public string Text50
-        {
-            get
-            {
-                if (text == null)
-                {
-                    return "";
-                }
-                else
-                {
-                    return (text.Substring(0, Math.Min(text.Length, 50)) + "...");
-                }
-            }
-        }
-
-        public string Text100
-        {
-            get
-            {
-                if (text == null)
-                {
-                    return "";
-                }
-                else
-                {
-                    return (text.Substring(0, Math.Min(text.Length, 100)) + "...");
-                }
-            }
-        }
     }
 }

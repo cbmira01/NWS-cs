@@ -4,6 +4,20 @@
     ViewBag.Title = "Article Content";
 }
 
+@*Thanks to http://stackoverflow.com/a/14848217*@
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @Html.Raw(input)
+    }
+    else
+    {
+        var thisString = input.Substring(0, length) + "...";
+        @Html.Raw(thisString)
+    }
+}
+
 <div class="row bumpPastTopbar">
     <h4>Manage Article Content</h4>
 
@@ -47,7 +61,7 @@
                             @Html.DisplayFor(modelItem => item.image)
                         </div>
                         <div>
-                            @Html.DisplayFor(modelItem => item.Text50)
+                           @Truncate(item.text, 50)
                         </div>
                     </div>
                 </div>

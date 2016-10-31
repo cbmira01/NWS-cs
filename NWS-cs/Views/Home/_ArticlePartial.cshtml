@@ -1,5 +1,19 @@
 ﻿@model IEnumerable<NWS_cs.Article>
 
+@*Thanks to http://stackoverflow.com/a/14848217*@
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @Html.Raw(input)
+    }
+    else
+    {
+        var thisString = input.Substring(0, length) + "...";
+        @Html.Raw(thisString)
+    }
+}
+
 <div class="row" data-equalizer="eq-inline">
     <h6>Articles...</h6>
     @{
@@ -18,7 +32,7 @@
                     }
                 </div>
                 <h5>@Html.DisplayFor(modelItem => item.title)</h5>
-                <p>@Html.DisplayFor(modelItem => item.Text100)</p>
+                <p>@Truncate(item.text, 100)</p>
                 <a href="~/Read/Article?uuid=@(Html.DisplayFor(modelItem => item.uuid))" class="button tiny">Read More</a>
             </div>
             index++;            
