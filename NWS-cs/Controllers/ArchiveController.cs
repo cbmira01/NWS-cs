@@ -14,6 +14,11 @@ namespace NWS_cs.Controllers
     {
         private NwsContext db = new NwsContext();
 
+        public ActionResult Index()
+        {
+            return View(db.Archives.ToList());
+        }
+
         public ActionResult Content()
         {
             return View(db.Archives.ToList());

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<NWS_cs.Archive>
+
+@{
+    ViewBag.Title = "Archives";
+}
+
+<div class="row bumpPastTopbar">
+    <h4>Deer Park Neighborhood Association Archives</h4>
+
+    <div class="row" data-equalizer>
+        @{
+            int index = 0;
+            string[] colors = { "greenA", "greenB", "greenC" };
+            foreach (var item in Model)
+            {
+                <div class="column small-12 panel left 
+                     @Html.Raw(colors[index % colors.Length])">
+                    <h5>
+                        <a href="~/@Html.DisplayFor(modelItem => item.link)">@Html.DisplayFor(modelItem => item.title)</a>
+                    </h5>
+                </div>
+                index++;
+            }
+        }
+    </div>
+</div>
