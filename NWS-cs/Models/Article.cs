@@ -8,6 +8,17 @@ namespace NWS_cs
 
     public partial class Article
     {
+        public Article()
+        {
+            this.hfso = false;
+
+            DateTime now = DateTime.Now;
+            this.title = "New Archive Title: " + now.ToString();
+
+            Guid g = Guid.NewGuid();
+            this.uuid = g.ToString();
+        }
+
         public int id { get; set; }
 
         public string uuid { get; set; }
