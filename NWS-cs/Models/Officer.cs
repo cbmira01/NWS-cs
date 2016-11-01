@@ -8,6 +8,14 @@ namespace NWS_cs
 
     public partial class Officer
     {
+        public Officer()
+        {
+            DateTime now = DateTime.Now;
+            this.name = "New Officer Name: " + now.ToString();
+
+            this.photo = "Content/Images/no_cat.jpg";
+        }
+
         public int id { get; set; }
 
         public string name { get; set; }

@@ -13,7 +13,7 @@ namespace NWS_cs
             this.hfso = false;
 
             DateTime now = DateTime.Now;
-            this.title = "New Archive Title: " + now.ToString();
+            this.title = "New Article Title: " + now.ToString();
 
             Guid g = Guid.NewGuid();
             this.uuid = g.ToString();

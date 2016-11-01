@@ -28,7 +28,8 @@ namespace NWS_cs.Controllers
         // GET: Officer/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new Officer();
+            return View(model);
         }
 
         // POST: Officer/Create
