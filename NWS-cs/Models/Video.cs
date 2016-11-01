@@ -8,6 +8,16 @@ namespace NWS_cs
 
     public partial class Video
     {
+        public Video()
+        {
+            DateTime now = DateTime.Now;
+            title = "New Video Title: " + now.ToString();
+
+            site = "no_video";
+            description = "Sorry, no video available.";
+            link = "Content/Images/no_cat.jpg";
+        }
+
         public int id { get; set; }
 
         public string site { get; set; }

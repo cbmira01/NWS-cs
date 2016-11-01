@@ -10,13 +10,13 @@ namespace NWS_cs
     {
         public Article()
         {
-            this.hfso = false;
+            hfso = false;
 
             DateTime now = DateTime.Now;
-            this.title = "New Article Title: " + now.ToString();
+            title = "New Article Title: " + now.ToString();
 
             Guid g = Guid.NewGuid();
-            this.uuid = g.ToString();
+            uuid = g.ToString();
         }
 
         public int id { get; set; }

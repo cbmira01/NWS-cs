@@ -11,7 +11,7 @@ namespace NWS_cs
 
         public Advertisement()
         {
-            this.link = "Content/Test/DefaultAd.jpg";
+            link = "Content/Test/DefaultAd.jpg";
         }
 
         public int id { get; set; }

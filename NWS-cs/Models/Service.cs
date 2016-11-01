@@ -11,7 +11,7 @@ namespace NWS_cs
         public Service()
         {
             DateTime now = DateTime.Now;
-            this.text = "New Neighborhood Service: " + now.ToString();
+            text = "New Neighborhood Service: " + now.ToString();
         }
 
         public int id { get; set; }

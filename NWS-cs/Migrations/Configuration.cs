@@ -197,7 +197,7 @@ namespace NWS_cs.Migrations
                 new Video {
                     id = 3,
                     site = "",
-                    type = "",
+                    type = "no_video",
                     title = "No video",
                     description = "Sorry, there is no video available.",
                     link = "Content/Images/no_cat.jpg"},

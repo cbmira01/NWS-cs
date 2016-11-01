@@ -23,7 +23,8 @@ namespace NWS_cs.Controllers
         // GET: Video/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new Video();
+            return View(model);
         }
 
         // POST: Video/Create

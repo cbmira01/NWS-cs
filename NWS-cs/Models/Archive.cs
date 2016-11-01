@@ -11,7 +11,7 @@ namespace NWS_cs
         public Archive()
         {
             DateTime now = DateTime.Now;
-            this.title = "New Archive Title: " + now.ToString();
+            title = "New Archive Title: " + now.ToString();
         }
 
         public int id { get; set; }
