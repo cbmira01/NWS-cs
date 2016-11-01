@@ -8,6 +8,12 @@ namespace NWS_cs
 
     public partial class Service
     {
+        public Service()
+        {
+            DateTime now = DateTime.Now;
+            this.text = "New Neighborhood Service: " + now.ToString();
+        }
+
         public int id { get; set; }
 
         public string text { get; set; }

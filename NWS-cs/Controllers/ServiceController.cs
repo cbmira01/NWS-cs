@@ -28,7 +28,8 @@ namespace NWS_cs.Controllers
         // GET: Service/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new Service();
+            return View(model);
         }
 
         // POST: Service/Create
