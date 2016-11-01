@@ -8,6 +8,12 @@ namespace NWS_cs
 
     public partial class Archive
     {
+        public Archive()
+        {
+            DateTime now = DateTime.Now;
+            this.title = "New Archive Title: " + now.ToString();
+        }
+
         public int id { get; set; }
 
         public string title { get; set; }

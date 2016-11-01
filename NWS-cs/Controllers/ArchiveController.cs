@@ -27,7 +27,8 @@ namespace NWS_cs.Controllers
         // GET: Archive/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new Archive();
+            return View(model);
         }
 
         // POST: Archive/Create
