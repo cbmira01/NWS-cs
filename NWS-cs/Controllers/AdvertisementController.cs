@@ -22,7 +22,8 @@ namespace NWS_cs.Controllers
         // GET: Advertisement/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new Advertisement();
+            return View(model);
         }
 
         // POST: Advertisement/Create

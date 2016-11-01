@@ -8,6 +8,12 @@ namespace NWS_cs
 
     public partial class Advertisement
     {
+
+        public Advertisement()
+        {
+            this.link = "Content/Test/DefaultAd.jpg";
+        }
+
         public int id { get; set; }
 
         public string link { get; set; }
