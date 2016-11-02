@@ -39,7 +39,7 @@ This project was done for Code Louisville's Fall 2016 session.
     - In Package Manager Console, run "update-database"
     - In SQL Server Object Explorer, refresh and observe creation of 
       of the persistent database:
-        SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs/Tables
+        - SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs/Tables
 - Build and run the project on a preferred web browser
 - See .../NWS-cs/Content/Test/... for additional content to link to
 
