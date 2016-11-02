@@ -16,7 +16,8 @@
                 {
                     <div>
                         <video width="300" height="220" controls>
-                            <source src="@Html.DisplayFor(modelItem => item.link)" type="@Html.DisplayFor(modelItem => item.type)">
+                            <source src="@Html.DisplayFor(modelItem => item.link)" 
+                                    type="@Html.DisplayFor(modelItem => item.type)">
                         </video>
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                         <p>@Html.DisplayFor(modelItem => item.description)</p>
@@ -24,7 +25,11 @@
                 }
                 else if (item.site.Equals("youtube")) {
                     <div>
-                        <iframe width="300" height="169" src="@Html.DisplayFor(modelItem => item.link)" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="300" 
+                                height="169" 
+                                src="@Html.DisplayFor(modelItem => item.link)" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
 
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                         <p>@Html.DisplayFor(modelItem => item.description)</p>
@@ -33,7 +38,8 @@
                 else
                 {
                     <div>
-                        <img src="@Html.DisplayFor(modelItem => item.link)" alt="@Html.DisplayFor(modelItem => item.title)" />
+                        <img src="@Html.DisplayFor(modelItem => item.link)" 
+                             alt="@Html.DisplayFor(modelItem => item.title)" />
                         <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                         <p>@Html.DisplayFor(modelItem => item.description)</p>
                     </div>
