@@ -12,5 +12,10 @@ namespace NWS_cs.Controllers
         {
             return View();
         }
+
+        public ActionResult _EditButtonPartial()
+        {
+            return PartialView();
+        }
     }
 }

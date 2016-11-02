@@ -301,6 +301,7 @@
     <Content Include="Views\Officer\Index.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Archive\Index.cshtml" />
+    <Content Include="Views\Edit\_EditButtonPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />
