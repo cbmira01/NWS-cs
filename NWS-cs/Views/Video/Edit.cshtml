@@ -12,9 +12,15 @@
         <div>
             @Html.LabelFor(model => model.site)
             <div class="tab">
-                <div>No Video: @Html.RadioButtonFor(model => model.site, "no_video")</div>
-                <div>On-site: @Html.RadioButtonFor(model => model.site, "onsite")</div>
-                <div>Youtube: @Html.RadioButtonFor(model => model.site, "youtube")</div>
+                <div>
+                    No Video: @Html.RadioButtonFor(model => model.site, "no_video")
+                </div>
+                <div>
+                    On-site: @Html.RadioButtonFor(model => model.site, "onsite")
+                </div>
+                <div>
+                    Youtube: @Html.RadioButtonFor(model => model.site, "youtube")
+                </div>
             </div>
 
             @Html.LabelFor(model => model.type)

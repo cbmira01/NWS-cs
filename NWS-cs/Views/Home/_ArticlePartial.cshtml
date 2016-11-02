@@ -26,14 +26,18 @@
                  data-equalizer-watch="eq-inline">
                 <div>
                     @if (item.hfso) {
-                        <img class="hide-for-small-only" src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />
+                        <img class="hide-for-small-only" 
+                             src="~/@(Html.DisplayFor(modelItem => item.image))" 
+                             alt="Article image" />
                     } else {
-                        <img src="~/@(Html.DisplayFor(modelItem => item.image))" alt="Article image" />
+                        <img src="~/@(Html.DisplayFor(modelItem => item.image))" 
+                             alt="Article image" />
                     }
                 </div>
                 <h5>@Html.DisplayFor(modelItem => item.title)</h5>
                 <p>@Truncate(item.text, 100)</p>
-                <a href="~/Read/Article?uuid=@(Html.DisplayFor(modelItem => item.uuid))" class="button tiny">Read More</a>
+                <a href="~/Read/Article?uuid=@(Html.DisplayFor(modelItem => item.uuid))" 
+                   class="button tiny">Read More</a>
             </div>
             index++;            
         }
