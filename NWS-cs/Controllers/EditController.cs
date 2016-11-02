@@ -8,14 +8,14 @@ namespace NWS_cs.Controllers
 {
     public class EditController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult _EditButtonPartial()
         {
             return PartialView();
+        }
+
+        public ActionResult Index()
+        {
+            return View();
         }
     }
 }

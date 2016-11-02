@@ -5,7 +5,9 @@
 }
 
 <div class="row bumpPastTopbar">
-    <h4>Manage Archive Content</h4>
+    @Html.Action("_EditButtonPartial", "Edit")
+
+    <h4>Archives</h4>
 
     <p>
         <a href='@Url.Action("Create", "Archive")' class="button tiny">

@@ -5,7 +5,9 @@
 }
 
 <div class="row bumpPastTopbar">
-    <h4>Manage Service Content</h4>
+    @Html.Action("_EditButtonPartial", "Edit")
+
+    <h4>Neighborhood Services</h4>
 
     <p>
         <a href='@Url.Action("Create", "Service")' class="button tiny">

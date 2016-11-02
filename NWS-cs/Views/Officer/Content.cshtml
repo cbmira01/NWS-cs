@@ -5,7 +5,9 @@
 }
 
 <div class="row bumpPastTopbar">
-    <h4>Manage Officer Content</h4>
+    @Html.Action("_EditButtonPartial", "Edit")
+
+    <h4>Neighborhood Association Officers</h4>
 
     <p>
         <a href='@Url.Action("Create", "Officer")' class="button tiny">

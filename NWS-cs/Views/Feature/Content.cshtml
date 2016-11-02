@@ -8,7 +8,9 @@
     var feature = Model.ElementAt(0);
 
     <div class="row bumpPastTopbar">
-        <h4>Manage Feature Content</h4>
+        @Html.Action("_EditButtonPartial", "Edit")
+
+        <h4>Feature Carousel</h4>
 
         <div class="column small-12 panel">
             <div class="row">

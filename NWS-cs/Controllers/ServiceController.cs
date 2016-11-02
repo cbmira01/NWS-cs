@@ -14,6 +14,11 @@ namespace NWS_cs.Controllers
     {
         private NwsContext db = new NwsContext();
 
+        public ActionResult _EditButtonPartial()
+        {
+            return PartialView();
+        }
+
         // GET: Service
         public ActionResult Index()
         {
