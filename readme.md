@@ -24,9 +24,9 @@ This project was done for Code Louisville's Fall 2016 session.
 
 # Tools and frameworks
 - Developed in Visual Studio 2015 Community Edition
-- MVC 5 
-- Styled with Zurb Foundation 5
-- Slick Carousel 1.5.9 for feature image fading
+- MVC 5, Entity Framework 6, .NET 4.5
+- Styled with Zurb Foundation 5.5.0
+- Slick Carousel 1.5.11 for feature image fading
 - jQuery 2.2.4
 - Modernizr 2.8.3
 
@@ -41,7 +41,11 @@ This project was done for Code Louisville's Fall 2016 session.
       of the persistent database:
         SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs/Tables
 - Build and run the project on a preferred web browser
-- See .../Content/Test/... for additional media to test with
+- See .../NWS-cs/Content/Test/... for additional content to link to
 
+- To reset the database:
+    - In SQL Server Object Explorer, delete the NWS_cs database
+    - If desired, edit seed data in .../Migrations/Configuration.cs
+    - In Package Manager Console, re-run "update-database"
 
 ## Comments welcome to Calvin Miracle, cbmira01@gmail.com
