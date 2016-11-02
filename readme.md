@@ -6,19 +6,22 @@ This project demonstrates a neighborhood web site constructed in C#.
 
 This project was done for Code Louisville's Fall 2016 session.
 
-## Points of interest
+## Web site features
 - Feature article with image carousel
 - Additional main-page articles with images
+- Each main-page article is accessible via its own publishable URL.
 - Links to on-site or YouTube videos
 - Provision for advertising content
 - Flattering display of neighborhood association board members
 - List of useful neighborhood phone numbers
-- List of linked archival newsletters
-- Panel-based styling features color cycling
-- Responsive design for large, medium and small media
+- Links to archived newsletters
+- All display items are editable with content management
+
+## Points of interest
+- Panel-based styling features equalization and color cycling
+- Born responsive to large, medium and small media
 - Article images can be optionally hidden on small media
-- Top-bar text adapts to small media
-- All displayable items editable with content management tools
+- Resize to small media prompts top-bar alteration and panel squashing
 - Small and simple initial test database
 - Test database is persistent and can be reset
 
@@ -32,7 +35,7 @@ This project was done for Code Louisville's Fall 2016 session.
 
 ## Preconditions for demonstration
 - Install Visual Studio 2015 Community Edition
-- Clone or otherwise retrieve and unpack Github project into a preferred folder
+- Clone, or retrieve and unpack, this Github project into a preferred folder
 - Locate and open the solution file in Visual Studio
 - Prepare the database:
     - ? prepare persistent LocalDB ?
@@ -45,7 +48,7 @@ This project was done for Code Louisville's Fall 2016 session.
 
 - To reset the database:
     - In SQL Server Object Explorer, delete the NWS_cs database
-    - If desired, edit seed data in .../Migrations/Configuration.cs
+    - If desired, edit seed data in .../NWS-cs/Migrations/Configuration.cs
     - In Package Manager Console, re-run "update-database"
 
 ## Comments welcome to Calvin Miracle, cbmira01@gmail.com
