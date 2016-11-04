@@ -1,10 +1,16 @@
+
+using System;
+using System.Collections.Generic;
+using System.Data.Entity.Migrations;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.InteropServices;
+
 namespace NWS_cs.Migrations
 {
-    using System.Collections.Generic;
-    using System.Data.Entity.Migrations;
-
     internal sealed class Configuration : DbMigrationsConfiguration<NWS_cs.NwsContext>
     {
+
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
@@ -218,7 +224,9 @@ namespace NWS_cs.Migrations
             };
             videos.ForEach(s => context.Videos.AddOrUpdate(s));
             context.SaveChanges();
+
         }
+
     }
 }
 
