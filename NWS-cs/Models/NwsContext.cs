@@ -1,8 +1,9 @@
+
+using System;
+using System.Data.Entity;
+
 namespace NWS_cs
 {
-    using System;
-    using System.Data.Entity;
-
     public partial class NwsContext : DbContext
     {
         public NwsContext()
@@ -23,6 +24,8 @@ namespace NWS_cs
         public virtual DbSet<Officer> Officers { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Video> Videos { get; set; }
+
+        public virtual DbSet<Jeopardy> JeopardyQuestions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {    

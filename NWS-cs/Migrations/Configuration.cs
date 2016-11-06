@@ -1,10 +1,9 @@
-
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using System.Diagnostics;
 using System.IO;
-using System.Runtime.InteropServices;
+using System.Web;
 
 namespace NWS_cs.Migrations
 {
@@ -223,6 +222,29 @@ namespace NWS_cs.Migrations
                     link = "https://www.youtube.com/embed/GLf3nrZXZT8"}
             };
             videos.ForEach(s => context.Videos.AddOrUpdate(s));
+            context.SaveChanges();
+
+
+            // The following section seeds the persistent LocalDB database with Jeopardy records. Since
+            // there are over 216,000 Jeopardy records available from the original JSON distribution,
+            // we'll take a sample of "sampleSize" records and seed them, to keep the LocalDB load time
+            // reasonable. We peek over into the NWS-Console project to find pre-processed data.
+            string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\NWS-Console\Data\");
+            string jsonFile = jsonPath + @"JeopardyDataProcessed.json";
+
+            string[] jsonLines = File.ReadAllLines(jsonFile);
+            int numberOfRecords = jsonFile.Length; // just over 216,000 records here
+            int sampleSize = 10000; 
+            int sampleRate = numberOfRecords / sampleSize;
+
+            for (int i = 0; i < numberOfRecords; i++)
+            {
+                if (i % sampleRate == 0)
+                {
+                    Jeopardy jr = JsonConvert.DeserializeObject<Jeopardy>(jsonLines[i]);
+                    context.JeopardyQuestions.AddOrUpdate(jr);
+                }
+            }
             context.SaveChanges();
 
         }
