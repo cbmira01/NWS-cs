@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.IO;
-using System.Web;
 
 namespace NWS_cs.Migrations
 {
@@ -226,15 +225,17 @@ namespace NWS_cs.Migrations
 
 
             // The following section seeds the persistent LocalDB database with Jeopardy records. Since
-            // there are over 216,000 Jeopardy records available from the original JSON distribution,
+            // there are nearly 217,000 Jeopardy records available from the original JSON distribution,
             // we'll take a sample of "sampleSize" records and seed them, to keep the LocalDB load time
             // reasonable. We'll peek over into the NWS-Console project to find pre-processed JSON data.
+            //
+            // https://www.reddit.com/r/datasets/comments/1uyd0t/200000_jeopardy_questions_in_a_json_file/
             string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\NWS-Console\Data\");
             string jsonFile = jsonPath + @"JeopardyDataProcessed.json";
 
             string[] jsonLines = File.ReadAllLines(jsonFile);
-            int numberOfRecords = jsonLines.Length; // just over 216,000 records here
-            int sampleSize = 5000; // approximately
+            int numberOfRecords = jsonLines.Length; // just under 217,000 records here
+            int sampleSize = 5000; // approximate
             int sampleRate = numberOfRecords / sampleSize;
             Jeopardy jr;
 

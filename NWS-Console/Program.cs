@@ -8,18 +8,18 @@ namespace NWS_Console
     class Program
     {
         //
-        // The code in this solution is basically disposable. This program helped with:
-        //      - exploration of the Jeopardy database 
+        // This project was used to help with:
+        //      - exploration and cleanup of the Jeopardy database 
         //        https://www.reddit.com/r/datasets/comments/1uyd0t/200000_jeopardy_questions_in_a_json_file/
-        //      - inter-solution relative path references
-        //      - set up and use of NewtonSoft JSON library
+        //      - learning how to set up and use the NewtonSoft JSON library
+        //      - providing a location for processed Jeopardy records
         //
         // The Jeopardy file is a array of objects, each object describing a particular
         // historical Jeopardy question, its category, answer, and show date. See the
         // JeopardyRecord class for the complete model.
         static void Main(string[] args)
         {
-            ConvertRawToLineFormat();
+            ConvertRawToLineFormat();            
             UnserializeJson();
         }
 
@@ -32,6 +32,7 @@ namespace NWS_Console
 
             string[] jsonLines = File.ReadAllLines(sourceFile);
             string jsonLine;
+            JeopardyRecord jr;
 
             Console.WriteLine();
             Console.WriteLine("{0} Jeopardy records found; <CR> to continue.", jsonLines.Length);
@@ -52,16 +53,17 @@ namespace NWS_Console
                     continue;
                 }
 
-                JeopardyRecord jr = JsonConvert.DeserializeObject<JeopardyRecord>(jsonLine);
+                jr = JsonConvert.DeserializeObject<JeopardyRecord>(jsonLine);
 
-                Console.WriteLine("Item {0}", i);
-                Console.WriteLine(jr.category);
-                Console.WriteLine(jr.air_date);
-                Console.WriteLine(jr.question);
-                Console.WriteLine(jr.value);
-                Console.WriteLine(jr.answer);
-                Console.WriteLine(jr.round);
-                Console.WriteLine(jr.show_number);
+                // Demonstrate access to all fields.
+                Console.WriteLine("Item:        " + i);
+                Console.WriteLine("category:    " + jr.category);
+                Console.WriteLine("air_date:    " + jr.air_date);
+                Console.WriteLine("question:    " + jr.question);
+                Console.WriteLine("value:       " + jr.value);
+                Console.WriteLine("answer:      " + jr.answer);
+                Console.WriteLine("round:       " + jr.round);
+                Console.WriteLine("show_number: " + jr.show_number);
                 Console.WriteLine();
             }
 
@@ -123,7 +125,6 @@ namespace NWS_Console
             }
 
         } // end ConvertRawToLineFormat
-
 
     }
 }

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NWS_Console
+﻿namespace NWS_Console
 {
-    // This is what an eventual Entity Framework model
+    // This is what an eventual Entity Framework model of the Jeopardy data
     // would look like, for the main web application.
     class JeopardyRecord
     {
+        // public int id { get; set; }
         public string category { get; set; }
         public string air_date { get; set; }
         public string question { get; set; }
