@@ -233,19 +233,19 @@ namespace NWS_cs.Migrations
             string jsonFile = jsonPath + @"JeopardyDataProcessed.json";
 
             string[] jsonLines = File.ReadAllLines(jsonFile);
-            int numberOfRecords = jsonFile.Length; // just over 216,000 records here
-            int sampleSize = 10000; 
+            int numberOfRecords = jsonLines.Length; // just over 216,000 records here
+            int sampleSize = 5000; // approximately
             int sampleRate = numberOfRecords / sampleSize;
+            Jeopardy jr;
 
             for (int i = 0; i < numberOfRecords; i = i + sampleRate)
             {
-                Jeopardy jr = JsonConvert.DeserializeObject<Jeopardy>(jsonLines[i]);
+                jr = JsonConvert.DeserializeObject<Jeopardy>(jsonLines[i]);
                 context.JeopardyQuestions.AddOrUpdate(jr);
+                context.SaveChanges();
             }
-            context.SaveChanges();
 
-        }
-
-    }
-}
+        } // end Seed
+    } // end class
+} // end namespace
 
