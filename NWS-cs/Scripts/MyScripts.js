@@ -13,7 +13,7 @@ $(window).on("resize", function (e) {
     var dpnaElement = document.getElementById("dpnaText");
     if (dpnaElement === null) { return }
 
-    if (Modernizr.mq('(max-width: 40em)')) { 
+    if (Modernizr.mq("(max-width: 40em)")) { 
         dpnaElement.innerHTML = "DPNA";
 
         $(document).foundation({
@@ -37,14 +37,7 @@ $(window).on("resize", function (e) {
 $(document).ready(function () {
 
     // Zurb Foundation initialization, http://foundation.zurb.com/sites/docs/v/5.5.3/components/equalizer.html
-    $(document).foundation({
-        equalizer: {
-            // specify if equalizer should make elements equal height once they become stacked
-            equalize_on_stack: true,
-            // make sure hidden elements in the feature carousel get noticed 
-            act_on_hidden_el: true
-        }
-    });
+    $(document).foundation();
 
     // Slick Carousel settings, http://kenwheeler.github.io/slick/
     $('.featureCarousel').slick({
