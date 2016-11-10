@@ -1,6 +1,8 @@
 namespace NWS_cs
 {
     using System;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Video
     {
@@ -16,14 +18,22 @@ namespace NWS_cs
 
         public int id { get; set; }
 
+        [DisplayName("Video Site")]
+        [Required(ErrorMessage = "Video site is required")]
         public string site { get; set; }
 
+        [DisplayName("Video Mime Type")]
         public string type { get; set; }
 
+        [DisplayName("Video Title")]
+        [Required(ErrorMessage = "Video title is required")]
         public string title { get; set; }
 
+        [DisplayName("Video Description")]
         public string description { get; set; }
 
+        [DisplayName("Video Link")]
+        [Required(ErrorMessage = "Video location is required")]
         public string link { get; set; }
     }
 }

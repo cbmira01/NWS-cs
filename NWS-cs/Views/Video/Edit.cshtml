@@ -6,6 +6,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true)
+
     <div class="row bumpPastTopbar">
         <h4>Edit a Video</h4>
 
@@ -21,6 +23,7 @@
                 <div>
                     Youtube: @Html.RadioButtonFor(model => model.site, "youtube")
                 </div>
+                @Html.ValidationMessageFor(model => model.site)
             </div>
 
             @Html.LabelFor(model => model.type)
@@ -31,6 +34,7 @@
             @Html.LabelFor(model => model.title)
             <div class="column small-12">
                 @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
             </div>
 
             @Html.LabelFor(model => model.description)
@@ -41,6 +45,7 @@
             @Html.LabelFor(model => model.link)
             <div class="column small-12">
                 @Html.EditorFor(model => model.link)
+                @Html.ValidationMessageFor(model => model.link)
             </div>
         </div>
 

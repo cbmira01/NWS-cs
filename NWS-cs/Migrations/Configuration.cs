@@ -200,7 +200,7 @@ namespace NWS_cs.Migrations
                     link = "https://www.youtube.com/embed/MaHrMR7JRS8"},
                 new Video {
                     id = 3,
-                    site = "",
+                    site = "no_video",
                     type = "no_video",
                     title = "No video",
                     description = "Sorry, there is no video available.",
