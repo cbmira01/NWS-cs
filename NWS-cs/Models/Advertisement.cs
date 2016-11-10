@@ -14,7 +14,7 @@ namespace NWS_cs
         public int id { get; set; }
 
         [DisplayName("Advertisement Link")]
-        [Required(ErrorMessage = "Advertisement location is required")]
+        [Required(ErrorMessage = "Advertisement link is required")]
         public string link { get; set; }
     }
 }

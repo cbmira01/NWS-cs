@@ -24,8 +24,10 @@ namespace NWS_cs
         [Required(ErrorMessage = "Officer email is required")]
         public string email { get; set; }
 
+        [DisplayName("Officer Description")]
         public string description { get; set; }
 
+        [DisplayName("Officer Photo")]
         public string photo { get; set; }
     }
 }

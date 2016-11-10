@@ -6,6 +6,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true)
+
     <div class="row bumpPastTopbar">
         <h4>Create a Service</h4>
 
@@ -13,6 +15,7 @@
             @Html.LabelFor(model => model.text)
             <div class="column small-12">
                 @Html.EditorFor(model => model.text)
+                @Html.ValidationMessageFor(model => model.text)
             </div>
         </div>
 

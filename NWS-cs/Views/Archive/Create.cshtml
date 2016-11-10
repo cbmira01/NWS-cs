@@ -6,6 +6,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true)
+
     <div class="row bumpPastTopbar">
         <h4>Create an Archive Item</h4>
 
@@ -13,11 +15,13 @@
             @Html.LabelFor(model => model.title)
             <div class="column small-12">
                 @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
             </div>
 
             @Html.LabelFor(model => model.link)
             <div class="column small-12">
                 @Html.EditorFor(model => model.link)
+                @Html.ValidationMessageFor(model => model.link)
             </div>
         </div>
 

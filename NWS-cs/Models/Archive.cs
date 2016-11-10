@@ -19,7 +19,7 @@ namespace NWS_cs
         public string title { get; set; }
 
         [DisplayName("Archive Link")]
-        [Required(ErrorMessage = "Archive location is required")]
+        [Required(ErrorMessage = "Archive link is required")]
         public string link { get; set; }
     }
 }

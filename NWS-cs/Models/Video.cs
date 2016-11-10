@@ -33,7 +33,7 @@ namespace NWS_cs
         public string description { get; set; }
 
         [DisplayName("Video Link")]
-        [Required(ErrorMessage = "Video location is required")]
+        [Required(ErrorMessage = "Video link is required")]
         public string link { get; set; }
     }
 }

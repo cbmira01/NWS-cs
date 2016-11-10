@@ -24,15 +24,15 @@ namespace NWS_cs
         public string article { get; set; }
 
         [DisplayName("Feature Image 1")]
-        [Required(ErrorMessage = "Image location is required")]
+        [Required(ErrorMessage = "Image link is required")]
         public string image1 { get; set; }
 
         [DisplayName("Feature Image 2")]
-        [Required(ErrorMessage = "Image location is required")]
+        [Required(ErrorMessage = "Image link is required")]
         public string image2 { get; set; }
 
         [DisplayName("Feature Image 3")]
-        [Required(ErrorMessage = "Image location is required")]
+        [Required(ErrorMessage = "Image link is required")]
         public string image3 { get; set; }
 
         [DisplayName("Feature Title")]
