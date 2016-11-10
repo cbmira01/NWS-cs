@@ -6,6 +6,7 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true)
     <div class="row bumpPastTopbar">
         <h4>Edit the Feature</h4>
 
@@ -13,6 +14,7 @@
             @Html.LabelFor(model => model.title)
             <div class="column small-12">
                 @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
             </div>
 
             @Html.LabelFor(model => model.article)
@@ -23,16 +25,19 @@
             @Html.LabelFor(model => model.image1)
             <div class="column small-12">
                 @Html.EditorFor(model => model.image1)
+                @Html.ValidationMessageFor(model => model.image1)
             </div>
 
             @Html.LabelFor(model => model.image2)
             <div class="column small-12">
                 @Html.EditorFor(model => model.image2)
+                @Html.ValidationMessageFor(model => model.image2)
             </div>
 
             @Html.LabelFor(model => model.image3)
             <div class="column small-12">
                 @Html.EditorFor(model => model.image3)
+                @Html.ValidationMessageFor(model => model.image3)
             </div>
         </div>
 
