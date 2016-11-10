@@ -1,7 +1,9 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace NWS_cs
 {
-    using System;
-
     public partial class Officer
     {
         public Officer()
@@ -14,8 +16,12 @@ namespace NWS_cs
 
         public int id { get; set; }
 
+        [DisplayName("Officer Name")]
+        [Required(ErrorMessage = "Officer name is required")]
         public string name { get; set; }
 
+        [DisplayName("Officer Email")]
+        [Required(ErrorMessage = "Officer email is required")]
         public string email { get; set; }
 
         public string description { get; set; }

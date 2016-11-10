@@ -1,7 +1,9 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace NWS_cs
 {
-    using System;
-
     public partial class Archive
     {
         public Archive()
@@ -12,8 +14,12 @@ namespace NWS_cs
 
         public int id { get; set; }
 
+        [DisplayName("Archive Title")]
+        [Required(ErrorMessage = "Archive title is required")]
         public string title { get; set; }
 
+        [DisplayName("Archive Link")]
+        [Required(ErrorMessage = "Archive location is required")]
         public string link { get; set; }
     }
 }

@@ -1,9 +1,9 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace NWS_cs
 {
-    using System;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-
     public partial class Feature
     {
         public Feature()

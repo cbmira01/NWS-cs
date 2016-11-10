@@ -1,8 +1,9 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace NWS_cs
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
-
     public partial class Article
     {
         public Article()
@@ -18,13 +19,21 @@ namespace NWS_cs
 
         public int id { get; set; }
 
+        [DisplayName("Article UUID")]
+        [Required(ErrorMessage = "Article UUID is required")]
         public string uuid { get; set; }
 
         // hfso indicates an image that is hidden for small media only
+        [DisplayName("Hide Image for Small Media Only")]
+        [Required(ErrorMessage = "HFSO is required")]
         public bool hfso { get; set; }
 
-         public string title { get; set; }
+        [DisplayName("Article Title")]
+        [Required(ErrorMessage = "Article title is required")]
+        public string title { get; set; }
 
+        [DisplayName("Article Image")]
+        [Required(ErrorMessage = "Article image is required")]
         public string image { get; set; }
 
         // Thanks to http://stackoverflow.com/a/4927032

@@ -1,7 +1,9 @@
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace NWS_cs
 {
-    using System;
-
     public partial class Service
     {
         public Service()
@@ -12,6 +14,8 @@ namespace NWS_cs
 
         public int id { get; set; }
 
+        [DisplayName("Service Text")]
+        [Required(ErrorMessage = "Service text is required")]
         public string text { get; set; }
     }
 }
