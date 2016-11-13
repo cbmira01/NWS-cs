@@ -168,6 +168,7 @@
     <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\ArchiveController.cs" />
     <Compile Include="Controllers\EditController.cs" />
+    <Compile Include="Controllers\JeopardyController.cs" />
     <Compile Include="Controllers\ReadController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
@@ -303,6 +304,8 @@
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Archive\Index.cshtml" />
     <Content Include="Views\Edit\_EditButtonPartial.cshtml" />
+    <Content Include="Views\Jeopardy\Search.cshtml" />
+    <Content Include="Views\Jeopardy\Results.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Archives\" />

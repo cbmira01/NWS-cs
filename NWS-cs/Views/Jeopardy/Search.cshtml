@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewBag.Title = "Jeopardy Search";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="row bumpPastTopbar">
+        <h4>Searchable Jeopardy Database</h4>
+
+        <div>
+            <h6>Since everyone in Deer Park is crazy about Jeopardy, this Jeopardy database is offered as a community service.</h6>
+        </div>
+
+        <div>
+            <h6>Search by a single word, top twenty results will be returned.</h6>
+        </div>
+
+        <input type="text" name="searchTerm" />
+        <input type="submit" class="button tiny" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

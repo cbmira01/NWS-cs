@@ -9,23 +9,24 @@ Completed for Code Louisville's Fall 2016 session
 ## Web site features
 - Feature article with image carousel
 - Additional main-page articles with images
-- Each main-page article is accessible via its own publishable URL
+- Main-page articles each have a independent URL
 - Links to on-site or YouTube videos
 - Provision for advertising content
 - Flattering display of neighborhood association board members
 - List of useful neighborhood phone numbers
 - Links to archived newsletters
-- All display items are editable with content management
+- All display items under content management
 - Content management includes default values and validations on many fields
+- Searchable Jeopardy database
 
 ## Points of interest
 - Panel-based styling features equalization and color cycling
 - Born responsive to large, medium and small media
 - Article images can be optionally hidden on small media
-- Resize to small media prompts top-bar alteration and panel squashing
+- Resize to small media causes top-bar alteration and panel squashing
 - Small and simple initial test database
-- Test database is persistent and can be reset
-- NWS-Console project used to prepare a large JSON database for the main project
+- Test database is persistent and can be reseeded
+- Side project (NWS-Console) to prepare a large JSON database for the main project
 
 # Packages and frameworks
 - Developed in Visual Studio 2015 Community Edition
@@ -38,15 +39,15 @@ Completed for Code Louisville's Fall 2016 session
 
 ## To see it in action:
 - Install Visual Studio 2015 Community Edition
-- Clone, or retrieve and unpack, this Github project into a preferred folder
+- Clone or retrieve this Github project into a preferred folder
 - Locate and open the NWS-cs solution in Visual Studio
 - Re-seed the database:
     - In SQL Server Object Explorer, delete the NWS_cs database (if it exists)
     - If desired, edit seed data in .../NWS-cs/Migrations/Configuration.cs
     - In Package Manager Console, run "update-database"
-    - Refresh in SQL Server Object Explorer, and observe creation of 
+    - Refresh SQL Server Object Explorer, and note the creation of 
       of the persistent database:
-        - SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs/Tables
+        - SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs
 - Build and run the project on a preferred web browser
 - See .../NWS-cs/Content/Test/... for additional test content
 

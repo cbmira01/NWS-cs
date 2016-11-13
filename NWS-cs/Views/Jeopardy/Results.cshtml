@@ -1,0 +1,54 @@
+﻿@model IEnumerable<NWS_cs.Jeopardy>
+
+@{
+    ViewBag.Title = "Jeopardy Results";
+}
+
+<div class="row bumpPastTopbar">
+    <h4>Jeopardy Database Search Results</h4>
+
+    <p>
+        <a href='@Url.Action("Search", "Jeopardy")' class="button tiny">
+            Return to search page
+        </a>
+    </p>
+
+    @{
+        foreach (var item in Model)
+        {
+            <div class="column small-12 panel">
+                <div class="row">
+                    <div class="column small-12 left">
+                        <div>
+                            @Html.DisplayFor(modelItem => item.category)
+                            for
+                            @Html.DisplayFor(modelItem => item.value)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.question)
+                        </div>
+                        <div>
+                            @Html.DisplayFor(modelItem => item.answer)
+                        </div>
+                        <div>
+                            Show date:
+                            @Html.DisplayFor(modelItem => item.air_date)
+                            Show number:
+                            @Html.DisplayFor(modelItem => item.show_number)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+    <p>
+        <a href='@Url.Action("Search", "Jeopardy")' class="button tiny">
+            Return to search page
+        </a>
+    </p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
