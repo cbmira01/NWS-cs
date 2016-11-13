@@ -17,6 +17,7 @@ namespace NWS_cs.Migrations
         protected override void Seed(NWS_cs.NwsContext context)
         {
 
+            #region Advertisment table
             var ads = new List<Advertisement> {
                 new Advertisement {
                     id = 1,
@@ -27,8 +28,9 @@ namespace NWS_cs.Migrations
             };
             ads.ForEach(s => context.Advertisements.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Archive table
             var archives = new List<Archive> {
                 new Archive {
                     id = 1,
@@ -49,8 +51,9 @@ namespace NWS_cs.Migrations
             };
             archives.ForEach(s => context.Archives.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Article table
             var articles = new List<Article> {
                 new Article {
                     id = 1,
@@ -90,8 +93,9 @@ namespace NWS_cs.Migrations
             };
             articles.ForEach(s => context.Articles.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Feature table
             var feature = new List<Feature> {
                 new Feature {
                     id = 1,
@@ -103,8 +107,9 @@ namespace NWS_cs.Migrations
             };
             feature.ForEach(s => context.Features.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Officer table
             var officers = new List<Officer> {
                 new Officer {
                     id = 1,
@@ -169,8 +174,9 @@ namespace NWS_cs.Migrations
             };
             officers.ForEach(s => context.Officers.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Service table
             var services = new List<Service> {
                 new Service {id = 1, text = "Emergencies: 911"},
                 new Service {id = 2, text = "City Call (non-emergency): 311 or 555-2221"},
@@ -181,8 +187,9 @@ namespace NWS_cs.Migrations
             };
             services.ForEach(s => context.Services.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Video table
             var videos = new List<Video> {
                 new Video {
                     id = 1,
@@ -222,8 +229,9 @@ namespace NWS_cs.Migrations
             };
             videos.ForEach(s => context.Videos.AddOrUpdate(s));
             context.SaveChanges();
+            #endregion
 
-
+            #region Jeopardy table
             // The following section seeds the persistent LocalDB database with Jeopardy records. Since
             // there are nearly 217,000 Jeopardy records available from the original JSON distribution,
             // we'll take a sample of "sampleSize" records and seed them, to keep the LocalDB load time
@@ -245,6 +253,7 @@ namespace NWS_cs.Migrations
                 context.JeopardyQuestions.AddOrUpdate(jr);
                 context.SaveChanges();
             }
+            #endregion
 
         } // end Seed
     } // end class

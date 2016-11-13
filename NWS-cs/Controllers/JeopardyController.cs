@@ -38,8 +38,6 @@ namespace NWS_cs.Controllers
             {
                 return RedirectToAction("Search");
             }
-
-
         }
 
         [HttpPost]

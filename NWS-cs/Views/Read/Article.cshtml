@@ -18,7 +18,9 @@
 
                 <div class="column small-12 medium-6 large-6 pastelB panel left" data-equalizer-watch>
                     <h4>@(Html.DisplayFor(modelItem => article.title))</h4>
-                    <p style="white-space:pre-wrap;">@(Html.DisplayFor(modelItem => article.text))</p>
+                    <p style="white-space:pre-wrap;">
+                        @(Html.DisplayFor(modelItem => article.text))
+                    </p>
                 </div>
             }
             else
@@ -29,7 +31,9 @@
                 </div>
 
                 <div class="column small-12 medium-6 large-6 purpleB panel left" data-equalizer-watch>
-                    <p style="white-space:pre-wrap;">@(Html.Raw("Sorry, the article at that link does not exist."))</p>
+                    <p style="white-space:pre-wrap;">
+                        @(Html.Raw("Sorry, the article at that link does not exist."))
+                    </p>
                 </div>
             }
 

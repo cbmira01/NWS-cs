@@ -19,12 +19,14 @@ namespace NWS_Console
         // JeopardyRecord class for the complete model.
         static void Main(string[] args)
         {
+            Console.WriteLine("Let's process some Jeopardy JSON!");
+
             ConvertRawToLineFormat();            
             UnserializeJson();
         }
 
-        // Demonstrate proper use of NewtonSoft JSON library, and find all fields of
-        // the Jeopardy records.
+        // Demonstrate proper use of NewtonSoft JSON library, perform a simple search, 
+        // and access all fields of the Jeopardy records.
         public static void UnserializeJson()
         {
             string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
@@ -35,23 +37,36 @@ namespace NWS_Console
             JeopardyRecord jr;
 
             Console.WriteLine();
-            Console.WriteLine("{0} Jeopardy records found; <CR> to continue.", jsonLines.Length);
+            Console.WriteLine();
+            Console.Write("{0} Jeopardy records found; <CR> to continue ", jsonLines.Length);
             Console.ReadLine();
+
+            Console.WriteLine();
+            Console.Write("Try searching for a word (eg, Galileo): ");
+            string search = Console.ReadLine().ToLower();
+            Console.WriteLine();
 
             for (int i = 0; i < jsonLines.Length; i++)
             {
                 jsonLine = jsonLines[i];
 
-                // Let's see all URLs and check any that DO NOT point to j-archive.com
-                if (!jsonLine.Contains("http"))
+                // Let's find all records that match a given string...
+                if (!jsonLine.ToLower().Contains(search))
                 {
                     continue;
                 }
 
-                if (jsonLine.Contains("j-archive.com"))
-                {
-                    continue;
-                }
+                // Let's find all records containing URLs...
+                //if (!jsonLine.ToLower().Contains("http"))
+                //{
+                //    continue;
+                //}
+
+                // ... and find any that DO NOT point to j-archive.com
+                //if (jsonLine.ToLower().Contains("j-archive.com"))
+                //{
+                //    continue;
+                //}
 
                 jr = JsonConvert.DeserializeObject<JeopardyRecord>(jsonLine);
 
@@ -67,6 +82,7 @@ namespace NWS_Console
                 Console.WriteLine();
             }
 
+            Console.Write("<CR> to continue ");
             Console.ReadLine();
         }
 
@@ -80,7 +96,10 @@ namespace NWS_Console
             string sourceFile = solutionPath + @"\Data\JeopardyDataRaw.json";
             string destFile = solutionPath + @"\Data\JeopardyDataProcessed.json";
 
-            int count = 0;
+            int dotCount = 0;
+
+            Console.WriteLine();
+            Console.Write("Now we're chopping the original JSON file into line-oriented format ");
 
             try
             {
@@ -111,8 +130,8 @@ namespace NWS_Console
                         }
 
                         // JSON object recognized; store it
-                        count++;
-                        if (count % 1000 == 0)
+                        dotCount++;
+                        if (dotCount % 10000 == 0)
                             Console.Write(".");
 
                         sw.WriteLine(sb.ToString());
