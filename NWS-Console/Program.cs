@@ -38,8 +38,8 @@ namespace NWS_Console
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.Write("{0} Jeopardy records found; <CR> to continue ", jsonLines.Length);
-            Console.ReadLine();
+            Console.WriteLine("{0} Jeopardy records found.", jsonLines.Length);
+
 
             Console.WriteLine();
             Console.Write("Try searching for a word (eg, Galileo): ");
@@ -56,29 +56,19 @@ namespace NWS_Console
                     continue;
                 }
 
-                // Let's find all records containing URLs...
-                //if (!jsonLine.ToLower().Contains("http"))
-                //{
-                //    continue;
-                //}
-
-                // ... and find any that DO NOT point to j-archive.com
-                //if (jsonLine.ToLower().Contains("j-archive.com"))
-                //{
-                //    continue;
-                //}
+                // Additional filter code can go here...
 
                 jr = JsonConvert.DeserializeObject<JeopardyRecord>(jsonLine);
 
                 // Demonstrate access to all fields.
-                Console.WriteLine("Item:        " + i);
-                Console.WriteLine("category:    " + jr.category);
-                Console.WriteLine("air_date:    " + jr.air_date);
-                Console.WriteLine("question:    " + jr.question);
-                Console.WriteLine("value:       " + jr.value);
-                Console.WriteLine("answer:      " + jr.answer);
-                Console.WriteLine("round:       " + jr.round);
-                Console.WriteLine("show_number: " + jr.show_number);
+                Console.WriteLine("id:            " + i);
+                Console.WriteLine("  category:    " + jr.category);
+                Console.WriteLine("  air_date:    " + jr.air_date);
+                Console.WriteLine("  question:    " + jr.question);
+                Console.WriteLine("  value:       " + jr.value);
+                Console.WriteLine("  answer:      " + jr.answer);
+                Console.WriteLine("  round:       " + jr.round);
+                Console.WriteLine("  show_number: " + jr.show_number);
                 Console.WriteLine();
             }
 
@@ -88,8 +78,8 @@ namespace NWS_Console
 
 
         // Convert the raw Jeopardy records into CRLF-terminated records,
-        // and write back to a destination file suitable for use by the 
-        // web-app migration/seeding.
+        // and write back to a destination file suitable for migration/seeding
+        // in the main web application.
         public static void ConvertRawToLineFormat()
         {
             string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
@@ -99,7 +89,7 @@ namespace NWS_Console
             int dotCount = 0;
 
             Console.WriteLine();
-            Console.Write("Now we're chopping the original JSON file into line-oriented format ");
+            Console.Write("Now we're chopping the original JSON file into one object per line ");
 
             try
             {
@@ -111,30 +101,37 @@ namespace NWS_Console
 
                     while (sr.Peek() >= 0)
                     {
-                        // Look for an opening curly-bracket
+                        // Look for an opening curly-bracket...
                         c = (char)sr.Read();
                         if (c != '{')
+                        {
                             continue;
+                        }
 
                         sb.Clear();
                         sb.Append(c);
 
-                        //Now inside JSON curly brackets
+                        // Now inside JSON curly brackets
                         while (true)
                         {
                             c = (char)sr.Read();
                             sb.Append(c);
 
                             if (c == '}')
+                            {
                                 break;
+                            }
                         }
 
                         // JSON object recognized; store it
+                        sw.WriteLine(sb.ToString());
+
                         dotCount++;
                         if (dotCount % 10000 == 0)
+                        {
                             Console.Write(".");
+                        }
 
-                        sw.WriteLine(sb.ToString());
                     }
                 }
             }
