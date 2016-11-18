@@ -39,16 +39,17 @@ Completed for Code Louisville's Fall 2016 session
 
 ## To see it in action:
 - Install Visual Studio 2015 Community Edition
-- Clone or retrieve this Github project into a preferred folder
+- Retrieve and unpack this Github project into a preferred folder
 - Locate and open the NWS-cs solution in Visual Studio
+- Build the project 
 - Re-seed the database:
     - In SQL Server Object Explorer, delete the NWS_cs database (if it exists)
     - If desired, edit seed data in .../NWS-cs/Migrations/Configuration.cs
-    - In Package Manager Console, run "update-database"
+    - In Package Manager Console, run "Update-Database"
     - Refresh SQL Server Object Explorer, and note the creation of 
       of the persistent database:
         - SQLSOE/SQL Server/MSSQLLocalDB.../Databases/NWS_cs
-- Build and run the project on a preferred web browser
+- Run the project on a preferred web browser
 - See .../NWS-cs/Content/Test/... for additional test content
 
 
