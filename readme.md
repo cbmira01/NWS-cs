@@ -1,6 +1,5 @@
-## Synopsis
 
-Neighborhood Web Site
+# Neighborhood Web Site
 
 This project demonstrates a neighborhood web site constructed in C#
 
@@ -28,7 +27,7 @@ Completed for Code Louisville's Fall 2016 session
 - Test database is persistent and can be reseeded
 - Side project (NWS-Console) to prepare a large JSON database for the main project
 
-# Packages and frameworks
+## Packages and frameworks
 - Developed in Visual Studio 2015 Community Edition
 - MVC 5, Entity Framework 6, .NET 4.5
 - Styled with Zurb Foundation 5.5.0
